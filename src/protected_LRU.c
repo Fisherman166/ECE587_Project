@@ -79,12 +79,13 @@ cache_blk_t* get_protected_LRU_victim(cache_set_t* miss_set, int assoc) {
         largest_counter_way->ignore = true;
     }
 
-    // Find the LRU of the remaining ways
+    // Find the LRU of the remaining ways, clear the counter and return a pointer to that line
     uint32_t LRU_stack_position = 0;
     for(uint32_t way = 0; way < assoc; way++) {
         if(valid_ways[way].ignore) continue;
         if( way > LRU_stack_position ) LRU_stack_position = way;
     }
+    valid_ways[LRU_stack_position].cache_line->access_counter = 0;
     return valid_ways[LRU_stack_position].cache_line;
 }
 
