@@ -1,0 +1,29 @@
+TITLE: CRC: Protected LRU Algorithm
+
+AUTHORS:
+Yuval Peress
+peress@cs.fsu.edu
+Florida State University
+
+Ian Finlayson
+finlayso@cs.fsu.edu
+Florida State University
+
+Dr. Gary Tyson
+tyson@cs.fsu.edu
+Florida State University
+
+Dr. David Whalley
+whalley@cs.fsu.edu
+Florida State University
+
+ABSTRACT:
+Additional on-chip transistors as well as more aggressive processors have led the way for an ever increasing memory hierarchy.
+Multi-core architectures often employ the use of a shared L3 cache to reduce accesses to off chip memory.
+Such memory structures often incur long latency (as much as 30 cycles in our framework) and are configured to retain sets as large as 16 way.
+A baseline replacement algorithm that has proven itself over and over again is the Least Recently Used (LRU) policy.
+This policy seeks to replace lines that were used least recently, which works well thanks to temporal locality.
+This paper seeks to improve on LRU by taking advantage of the 16 ways available to include a bias for replacement.
+By keeping track of the relative use of each lines, some frequently used lines may become "protected".
+By providing protection for such lines we have managed to reduce the miss rate to 62.89% from LRU's 70.08%.
+Using a memory reference trace, we also demonstrated that the best replacement algorithm, one which knows about future accesses, could only provide a 56.05% miss rate.
