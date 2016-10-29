@@ -18,7 +18,7 @@ typedef struct {
     bool ignore;    // Is one of the ways to save
 } validWay;
 
-//
+
 //*****************************************************************************
 // Functions
 //*****************************************************************************
@@ -59,7 +59,7 @@ cache_blk_t* get_protected_LRU_victim(cache_set_t* miss_set, int assoc) {
     while(current_way != NULL) {
         valid_ways[way_number].cache_line = current_way;
         valid_ways[way_number].access_number = current_way->access_counter;
-        valid_ways[way_number].valid = false;
+        valid_ways[way_number].ignore = false;
         current_way = current_way->way_next;
         way_number++;
     }
