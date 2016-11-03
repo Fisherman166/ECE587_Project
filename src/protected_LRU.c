@@ -13,7 +13,7 @@ static uint32_t max_counter_value = 0;
 static uint32_t ways_to_save_on_eviction = 0;
 
 typedef struct {
-    cache_blk_t* cache_line;
+    struct cache_blk_t* cache_line;
     uint32_t access_number;
     bool ignore;    // Is one of the ways to save
 } validWay;
@@ -22,13 +22,14 @@ typedef struct {
 //*****************************************************************************
 // Functions
 //*****************************************************************************
-void init_protected_LRU(cache_t* cache, uint32_t counter_value, uint32_t ways_to_save) {
-    max_counter_value = counter_value;
-    ways_to_save_on_eviction = ways_to_save;
+void init_protected_LRU(struct cache_t* cache, unsigned int counter_value_max, unsigned int ways_to_save) {
+    max_counter_value = (uint32_t)counter_value_max;
+    ways_to_save_on_eviction = (uint32_t)ways_to_save;
+    uint32_t i;
 
-    for(uint32_t i = 0; i < cache->nsets; i++) {
-        cache_set_t* current_set = &cache->sets[i];
-        cache_blk_t* current_way = current_set->way_head;
+    for(i = 0; i < cache->nsets; i++) {
+        struct cache_set_t* current_set = &cache->sets[i];
+        struct cache_blk_t* current_way = current_set->way_head;
         // Traverse all of the ways and inititalize the counter to 0
         while(current_way != NULL) {
             current_way->access_counter = 0;
@@ -37,13 +38,13 @@ void init_protected_LRU(cache_t* cache, uint32_t counter_value, uint32_t ways_to
     }
 }
 
-void update_protected_LRU(cache_set_t* hit_set, cache_blk_t* hit_block) {
+void update_protected_LRU(struct cache_set_t* hit_set, struct cache_blk_t* hit_block) {
     hit_block->access_counter++;
 
     // Divide all counters in the set by 2 to avoid having lines that get accessed
     // a lot from getting stuck in the cache forever
     if(hit_block->access_counter >= max_counter_value) {
-        cache_blk_t* current_way = hit_set->way_head;
+        struct cache_blk_t* current_way = hit_set->way_head;
         while(current_way != NULL) {
             current_way->access_counter >>= 1;
             current_way = current_way->way_next;
@@ -51,10 +52,10 @@ void update_protected_LRU(cache_set_t* hit_set, cache_blk_t* hit_block) {
     }
 }
 
-cache_blk_t* get_protected_LRU_victim(cache_set_t* miss_set, int assoc) {
+struct cache_blk_t* get_protected_LRU_victim(struct cache_set_t* miss_set, int assoc) {
     // Build up an array of valid ways
     validWay valid_ways[assoc];
-    cache_blk_t* current_way = miss_set->way_head;
+    struct cache_blk_t* current_way = miss_set->way_head;
     uint32_t way_number = 0;
     while(current_way != NULL) {
         valid_ways[way_number].cache_line = current_way;
@@ -66,10 +67,12 @@ cache_blk_t* get_protected_LRU_victim(cache_set_t* miss_set, int assoc) {
 
     // Save the cache lines with the N largest access counter values.
     // Where N = ways_to_save_on_eviction
-    for(uint32_t i = 0; i < ways_to_save_on_eviction; i++) {
+    uint32_t i;
+    uint32_t way = 0;
+    for(i = 0; i < ways_to_save_on_eviction; i++) {
         uint32_t largest_counter = 0;
         validWay* largest_counter_way = NULL;
-        for(uint32_t way = 0; way < assoc; way++) {
+        for(way = 0; way < assoc; way++) {
             if(valid_ways[way].ignore) continue;
             if( (largest_counter_way == NULL) || (valid_ways[way].access_number > largest_counter) ) {
                 largest_counter = valid_ways[way].access_number;
@@ -81,7 +84,7 @@ cache_blk_t* get_protected_LRU_victim(cache_set_t* miss_set, int assoc) {
 
     // Find the LRU of the remaining ways, clear the counter and return a pointer to that line
     uint32_t LRU_stack_position = 0;
-    for(uint32_t way = 0; way < assoc; way++) {
+    for(way = 0; way < assoc; way++) {
         if(valid_ways[way].ignore) continue;
         if( way > LRU_stack_position ) LRU_stack_position = way;
     }

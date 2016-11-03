@@ -999,38 +999,63 @@ sim_check_options(struct opt_odb_t *odb,        /* options database */
   if (LSQ_size < 2 || (LSQ_size & (LSQ_size-1)) != 0)
     fatal("LSQ size must be a positive number > 1 and a power of two");
 
-  /* use a level 1 D-cache? */
-  if (!mystricmp(cache_dl1_opt, "none"))
-    {
-      cache_dl1 = NULL;
+    /* use a level 1 D-cache? */
+    if (!mystricmp(cache_dl1_opt, "none")) {
+        cache_dl1 = NULL;
 
-      /* the level 2 D-cache cannot be defined */
-      if (strcmp(cache_dl2_opt, "none"))
-	fatal("the l1 data cache must defined if the l2 cache is defined");
-      cache_dl2 = NULL;
+        /* the level 2 D-cache cannot be defined */
+        if (strcmp(cache_dl2_opt, "none"))
+	        fatal("the l1 data cache must defined if the l2 cache is defined");
+        cache_dl2 = NULL;
     }
-  else /* dl1 is defined */
-    {
-      if (sscanf(cache_dl1_opt, "%[^:]:%d:%d:%d:%c",
-		 name, &nsets, &bsize, &assoc, &c) != 5)
-	fatal("bad l1 D-cache parms: <name>:<nsets>:<bsize>:<assoc>:<repl>");
-      cache_dl1 = cache_create(name, nsets, bsize, /* balloc */FALSE,
-			       /* usize */0, assoc, cache_char2policy(c),
-			       dl1_access_fn, /* hit lat */cache_dl1_lat);
+    else { /* dl1 is defined */
+        unsigned int max_counter_value, ways_to_save;
+        enum cache_policy replacement_policy;
 
-      /* is the level 2 D-cache defined? */
-      if (!mystricmp(cache_dl2_opt, "none"))
-	cache_dl2 = NULL;
-      else
-	{
-	  if (sscanf(cache_dl2_opt, "%[^:]:%d:%d:%d:%c",
-		     name, &nsets, &bsize, &assoc, &c) != 5)
-	    fatal("bad l2 D-cache parms: "
-		  "<name>:<nsets>:<bsize>:<assoc>:<repl>");
-	  cache_dl2 = cache_create(name, nsets, bsize, /* balloc */FALSE,
-				   /* usize */0, assoc, cache_char2policy(c),
-				   dl2_access_fn, /* hit lat */cache_dl2_lat);
-	}
+        if (sscanf(cache_dl1_opt, "%[^:]:%d:%d:%d:%c", name, &nsets, &bsize, &assoc, &c) < 5)
+	        fatal("bad l1 D-cache parms: <name>:<nsets>:<bsize>:<assoc>:<repl>");
+
+        replacement_policy = cache_char2policy(c);
+
+        if(replacement_policy == PLRU) {
+            if(sscanf(cache_dl1_opt, "%[^:]:%d:%d:%d:%c:%u:%u", name, &nsets, &bsize, &assoc, &c, &max_counter_value, &ways_to_save) != 7)
+	            fatal("bad l1 D-cache parms for protected LRU: <name>:<nsets>:<bsize>:<assoc>:p:<max_counter>:<ways to save>");
+            cache_dl1 = cache_create(name, nsets, bsize, /* balloc */FALSE,
+			              /* usize */0, assoc, replacement_policy,
+			                         dl1_access_fn, /* hit lat */cache_dl1_lat,
+                                     max_counter_value, ways_to_save);
+        }
+        else {
+            cache_dl1 = cache_create(name, nsets, bsize, /* balloc */FALSE,
+			              /* usize */0, assoc, replacement_policy,
+			                         dl1_access_fn, /* hit lat */cache_dl1_lat,
+                                     0, 0);
+        }
+
+        /* is the level 2 D-cache defined? */
+        if (!mystricmp(cache_dl2_opt, "none"))
+            cache_dl2 = NULL;
+        else {
+            if (sscanf(cache_dl2_opt, "%[^:]:%d:%d:%d:%c", name, &nsets, &bsize, &assoc, &c) < 5)
+                fatal("bad l2 D-cache parms: <name>:<nsets>:<bsize>:<assoc>:<repl>");
+
+            replacement_policy = cache_char2policy(c);
+
+            if(replacement_policy == PLRU) {
+                if(sscanf(cache_dl2_opt, "%[^:]:%d:%d:%d:%c:%u:%u", name, &nsets, &bsize, &assoc, &c, &max_counter_value, &ways_to_save) != 7)
+                    fatal("bad l2 D-cache parms for protected LRU: <name>:<nsets>:<bsize>:<assoc>:p:<max_counter>:<ways to save>");
+                cache_dl2 = cache_create(name, nsets, bsize, /* balloc */FALSE,
+                              /* usize */0, assoc, replacement_policy,
+                                         dl2_access_fn, /* hit lat */cache_dl2_lat,
+                                         max_counter_value, ways_to_save);
+            }
+            else {
+                cache_dl2 = cache_create(name, nsets, bsize, /* balloc */FALSE,
+                              /* usize */0, assoc, replacement_policy,
+                                         dl2_access_fn, /* hit lat */cache_dl2_lat,
+                                         0, 0);
+            }
+	    }
     }
 
   /* use a level 1 I-cache? */
@@ -1072,7 +1097,8 @@ sim_check_options(struct opt_odb_t *odb,        /* options database */
 	fatal("bad l1 I-cache parms: <name>:<nsets>:<bsize>:<assoc>:<repl>");
       cache_il1 = cache_create(name, nsets, bsize, /* balloc */FALSE,
 			       /* usize */0, assoc, cache_char2policy(c),
-			       il1_access_fn, /* hit lat */cache_il1_lat);
+			       il1_access_fn, /* hit lat */cache_il1_lat,
+                   0, 0);
 
       /* is the level 2 D-cache defined? */
       if (!mystricmp(cache_il2_opt, "none"))
@@ -1091,7 +1117,8 @@ sim_check_options(struct opt_odb_t *odb,        /* options database */
 		  "<name>:<nsets>:<bsize>:<assoc>:<repl>");
 	  cache_il2 = cache_create(name, nsets, bsize, /* balloc */FALSE,
 				   /* usize */0, assoc, cache_char2policy(c),
-				   il2_access_fn, /* hit lat */cache_il2_lat);
+				   il2_access_fn, /* hit lat */cache_il2_lat,
+                   0, 0);
 	}
     }
 
@@ -1106,7 +1133,8 @@ sim_check_options(struct opt_odb_t *odb,        /* options database */
       itlb = cache_create(name, nsets, bsize, /* balloc */FALSE,
 			  /* usize */sizeof(md_addr_t), assoc,
 			  cache_char2policy(c), itlb_access_fn,
-			  /* hit latency */1);
+			  /* hit latency */1,
+              0, 0);
     }
 
   /* use a D-TLB? */
@@ -1120,7 +1148,8 @@ sim_check_options(struct opt_odb_t *odb,        /* options database */
       dtlb = cache_create(name, nsets, bsize, /* balloc */FALSE,
 			  /* usize */sizeof(md_addr_t), assoc,
 			  cache_char2policy(c), dtlb_access_fn,
-			  /* hit latency */1);
+			  /* hit latency */1,
+              0, 0);
     }
 
   if (cache_dl1_lat < 1)

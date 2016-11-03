@@ -57,6 +57,7 @@
 #include "misc.h"
 #include "machine.h"
 #include "cache.h"
+#include "protected_LRU.h"
 
 /* cache access macros */
 #define CACHE_TAG(cp, addr)	((addr) >> (cp)->tag_shift)
@@ -270,7 +271,9 @@ cache_create(char *name,		/* name of the cache */
 					   md_addr_t baddr, int bsize,
 					   struct cache_blk_t *blk,
 					   tick_t now),
-	     unsigned int hit_latency)	/* latency in cycles for a hit */
+	     unsigned int hit_latency,	/* latency in cycles for a hit */
+         unsigned int max_counter_value,
+         unsigned int ways_to_save)
 {
   struct cache_t *cp;
   struct cache_blk_t *blk;
@@ -398,6 +401,10 @@ cache_create(char *name,		/* name of the cache */
 	    cp->sets[i].way_tail = blk;
 	}
     }
+
+  if(policy == PLRU) {
+      init_protected_LRU(cp, max_counter_value, ways_to_save);
+  }
   return cp;
 }
 
@@ -409,6 +416,7 @@ cache_char2policy(char c)		/* replacement policy as a char */
   case 'l': return LRU;
   case 'r': return Random;
   case 'f': return FIFO;
+  case 'p': return PLRU;
   default: fatal("bogus replacement policy, `%c'", c);
   }
 }
@@ -581,6 +589,8 @@ cache_access(struct cache_t *cp,	/* cache to access */
       repl = CACHE_BINDEX(cp, cp->sets[set].blks, bindex);
     }
     break;
+  case PLRU:
+    repl = get_protected_LRU_victim(&cp->sets[set], cp->assoc);
   default:
     panic("bogus replacement policy");
   }
@@ -674,6 +684,10 @@ cache_access(struct cache_t *cp,	/* cache to access */
       /* move this block to head of the way (MRU) list */
       update_way_list(&cp->sets[set], blk, Head);
     }
+
+  if(cp->policy == PLRU) {
+      update_protected_LRU(&cp->sets[set], blk);
+  }
 
   /* tag is unchanged, so hash links (if they exist) are still valid */
 
@@ -782,6 +796,7 @@ cache_flush(struct cache_t *cp,		/* cache instance to flush */
 	    {
 	      cp->invalidations++;
 	      blk->status &= ~CACHE_BLK_VALID;
+          blk->access_counter = 0;
 
 	      if (blk->status & CACHE_BLK_DIRTY)
 		{

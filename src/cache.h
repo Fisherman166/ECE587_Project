@@ -102,7 +102,8 @@
 enum cache_policy {
   LRU,		/* replace least recently used block (perfect LRU) */
   Random,	/* replace a random block */
-  FIFO		/* replace the oldest block in the set */
+  FIFO,		/* replace the oldest block in the set */
+  PLRU      /* protected LRU */
 };
 
 /* block status values */
@@ -125,6 +126,7 @@ struct cache_blk_t
 				   is set when a miss fetch is initiated */
   byte_t *user_data;		/* pointer to user defined data, e.g.,
 				   pre-decode data or physical page address */
+  unsigned int access_counter; /* How many times its been accessed in PLRU */
   /* DATA should be pointer-aligned due to preceeding field */
   /* NOTE: this is a variable-size tail array, this must be the LAST field
      defined in this structure! */
@@ -225,7 +227,9 @@ cache_create(char *name,		/* name of the cache */
 					   md_addr_t baddr, int bsize,
 					   struct cache_blk_t *blk,
 					   tick_t now),
-	     unsigned int hit_latency);/* latency in cycles for a hit */
+	     unsigned int hit_latency, /* latency in cycles for a hit */
+         unsigned int max_counter_value, /* PLRU */
+         unsigned int ways_to_save); /* PLRU */
 
 /* parse policy */
 enum cache_policy			/* replacement policy enum */
