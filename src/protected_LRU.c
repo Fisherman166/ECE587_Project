@@ -7,7 +7,10 @@
 //*****************************************************************************
 
 #include <stdbool.h>
+#include <stdio.h>
 #include "protected_LRU.h"
+
+#define DEBUG 
 
 static uint32_t max_counter_value = 0;
 static uint32_t ways_to_save_on_eviction = 0;
@@ -27,6 +30,10 @@ void init_protected_LRU(struct cache_t* cache, unsigned int counter_value_max, u
     ways_to_save_on_eviction = (uint32_t)ways_to_save;
     uint32_t i;
 
+    #ifdef DEBUG
+    printf("In init pLRU. max_counter_value: %u, ways_to_save: %u\n", max_counter_value, ways_to_save_on_eviction);
+    #endif
+
     for(i = 0; i < cache->nsets; i++) {
         struct cache_set_t* current_set = &cache->sets[i];
         struct cache_blk_t* current_way = current_set->way_head;
@@ -36,6 +43,9 @@ void init_protected_LRU(struct cache_t* cache, unsigned int counter_value_max, u
             current_way = current_way->way_next;
         }
     }
+    #ifdef DEBUG
+    printf("Exiting init pLRU.\n");
+    #endif
 }
 
 void update_protected_LRU(struct cache_set_t* hit_set, struct cache_blk_t* hit_block) {

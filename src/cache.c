@@ -140,6 +140,13 @@
 /* bound sqword_t/dfloat_t to positive int */
 #define BOUND_POS(N)		((int)(MIN(MAX(0, (N)), 2147483647)))
 
+static FILE* debug_file = NULL;
+
+static void debug_print(const char* string) {
+    fprintf(debug_file, string);
+    fflush(debug_file);
+}
+
 /* unlink BLK from the hash table bucket chain in SET */
 static void
 unlink_htab_ent(struct cache_t *cp,		/* cache to update */
@@ -403,7 +410,10 @@ cache_create(char *name,		/* name of the cache */
     }
 
   if(policy == PLRU) {
+      debug_file = fopen("debug_out.log", "w");
+      if(debug_file == NULL) fatal("FAILED TO OPEN DEBUG FILE\n");
       init_protected_LRU(cp, max_counter_value, ways_to_save);
+      debug_print("After init cache\n");
   }
   return cp;
 }
@@ -590,10 +600,13 @@ cache_access(struct cache_t *cp,	/* cache to access */
     }
     break;
   case PLRU:
+    debug_print("Before evict PLRU\n");
     repl = get_protected_LRU_victim(&cp->sets[set], cp->assoc);
+    debug_print("After evict PLRU\n");
   default:
     panic("bogus replacement policy");
   }
+  debug_print("After evict\n");
 
   /* remove this block from the hash bucket chain, if hash exists */
   if (cp->hsize)
@@ -686,6 +699,7 @@ cache_access(struct cache_t *cp,	/* cache to access */
     }
 
   if(cp->policy == PLRU) {
+      debug_print("pLRU slow hit\n");
       update_protected_LRU(&cp->sets[set], blk);
   }
 
