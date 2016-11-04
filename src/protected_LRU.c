@@ -9,6 +9,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "protected_LRU.h"
+#include "misc.h"
 
 static uint32_t max_counter_value = 0;
 static uint32_t ways_to_save_on_eviction = 0;
@@ -24,6 +25,10 @@ typedef struct {
 // Functions
 //*****************************************************************************
 void init_protected_LRU(struct cache_t* cache, unsigned int counter_value_max, unsigned int ways_to_save) {
+    if(ways_to_save > (unsigned int)cache->assoc) {
+        fatal("ERROR: Ways to save: %u is greater than the assoc: %u of the cache\n", ways_to_save, (unsigned int)cache->assoc);
+    }
+
     max_counter_value = (uint32_t)counter_value_max;
     ways_to_save_on_eviction = (uint32_t)ways_to_save;
     uint32_t i;
