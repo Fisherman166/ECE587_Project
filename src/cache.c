@@ -600,13 +600,12 @@ cache_access(struct cache_t *cp,	/* cache to access */
     }
     break;
   case PLRU:
-    debug_print("Before evict PLRU\n");
     repl = get_protected_LRU_victim(&cp->sets[set], cp->assoc);
     debug_print("After evict PLRU\n");
+    break;
   default:
     panic("bogus replacement policy");
   }
-  debug_print("After evict\n");
 
   /* remove this block from the hash bucket chain, if hash exists */
   if (cp->hsize)
@@ -692,6 +691,7 @@ cache_access(struct cache_t *cp,	/* cache to access */
     blk->status |= CACHE_BLK_DIRTY;
 
   /* if LRU replacement and this is not the first element of list, reorder */
+  //if (blk->way_prev && ((cp->policy == LRU) || (cp->policy == PLRU)) )
   if (blk->way_prev && cp->policy == LRU)
     {
       /* move this block to head of the way (MRU) list */
