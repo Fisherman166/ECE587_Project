@@ -9,8 +9,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "protected_LRU.h"
-
-#define DEBUG 
+#include "misc.h"
 
 static uint32_t max_counter_value = 0;
 static uint32_t ways_to_save_on_eviction = 0;
@@ -26,13 +25,13 @@ typedef struct {
 // Functions
 //*****************************************************************************
 void init_protected_LRU(struct cache_t* cache, unsigned int counter_value_max, unsigned int ways_to_save) {
+    if(ways_to_save > (unsigned int)cache->assoc) {
+        fatal("ERROR: Ways to save: %u is greater than the assoc: %u of the cache\n", ways_to_save, (unsigned int)cache->assoc);
+    }
+
     max_counter_value = (uint32_t)counter_value_max;
     ways_to_save_on_eviction = (uint32_t)ways_to_save;
     uint32_t i;
-
-    #ifdef DEBUG
-    printf("In init pLRU. max_counter_value: %u, ways_to_save: %u\n", max_counter_value, ways_to_save_on_eviction);
-    #endif
 
     for(i = 0; i < cache->nsets; i++) {
         struct cache_set_t* current_set = &cache->sets[i];
@@ -43,9 +42,6 @@ void init_protected_LRU(struct cache_t* cache, unsigned int counter_value_max, u
             current_way = current_way->way_next;
         }
     }
-    #ifdef DEBUG
-    printf("Exiting init pLRU.\n");
-    #endif
 }
 
 void update_protected_LRU(struct cache_set_t* hit_set, struct cache_blk_t* hit_block) {

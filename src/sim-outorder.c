@@ -407,6 +407,28 @@ static struct stat_stat_t *pcstat_sdists[MAX_PCSTAT_VARS];
 	 : (panic("bad stat class"), 0))))
 
 
+// Parse the cache commandline and have it handle both the legacy and pLRU replacement policies
+static void parse_cache_cmdline(const char* cmdline, char* cache_name, int* num_sets,
+                                int* bsize, int* assoc, enum cache_policy* replacement_policy,
+                                unsigned int* max_counter_value, unsigned int* ways_to_save) {
+    char c;
+
+    if( sscanf(cmdline, "%[^:]:%d:%d:%d:%c", cache_name, num_sets, bsize, assoc, &c) != 5 ) {
+        fatal("Failed to parse the generic commandline: <name>:<nsets>:<bsize>:<assoc>:<repl>");
+    }
+    *replacement_policy = cache_char2policy(c);
+
+    if(*replacement_policy == PLRU) {
+        if( sscanf(cmdline, "%[^:]:%d:%d:%d:%c:%u:%u", cache_name, num_sets, bsize, assoc, &c, max_counter_value, ways_to_save) != 7 ) {
+            fatal("Failed to parse pLRU commandline for cache %s: <name>:<nsets>:<bsize>:<assoc>:p:<max_counter>:<ways to save>\n", cache_name);
+        }
+    }
+    else {
+        *max_counter_value = 0;
+        *ways_to_save = 0;
+    }
+}
+
 /* memory access latency, assumed to not cross a page boundary */
 static unsigned int			/* total latency of access */
 mem_access_latency(int blk_sz)		/* block size accessed */
@@ -881,6 +903,8 @@ sim_check_options(struct opt_odb_t *odb,        /* options database */
 {
   char name[128], c;
   int nsets, bsize, assoc;
+  unsigned int max_counter_value, ways_to_save;
+  enum cache_policy replacement_policy;
 
   if (fastfwd_count < 0 || fastfwd_count >= 2147483647)
     fatal("bad fast forward count: %d", fastfwd_count);
@@ -1009,52 +1033,23 @@ sim_check_options(struct opt_odb_t *odb,        /* options database */
         cache_dl2 = NULL;
     }
     else { /* dl1 is defined */
-        unsigned int max_counter_value, ways_to_save;
-        enum cache_policy replacement_policy;
-
-        if (sscanf(cache_dl1_opt, "%[^:]:%d:%d:%d:%c", name, &nsets, &bsize, &assoc, &c) < 5)
-	        fatal("bad l1 D-cache parms: <name>:<nsets>:<bsize>:<assoc>:<repl>");
-
-        replacement_policy = cache_char2policy(c);
-
-        if(replacement_policy == PLRU) {
-            if(sscanf(cache_dl1_opt, "%[^:]:%d:%d:%d:%c:%u:%u", name, &nsets, &bsize, &assoc, &c, &max_counter_value, &ways_to_save) != 7)
-	            fatal("bad l1 D-cache parms for protected LRU: <name>:<nsets>:<bsize>:<assoc>:p:<max_counter>:<ways to save>");
-            cache_dl1 = cache_create(name, nsets, bsize, /* balloc */FALSE,
-			              /* usize */0, assoc, replacement_policy,
-			                         dl1_access_fn, /* hit lat */cache_dl1_lat,
-                                     max_counter_value, ways_to_save);
-        }
-        else {
-            cache_dl1 = cache_create(name, nsets, bsize, /* balloc */FALSE,
-			              /* usize */0, assoc, replacement_policy,
-			                         dl1_access_fn, /* hit lat */cache_dl1_lat,
-                                     0, 0);
-        }
+        parse_cache_cmdline(cache_dl1_opt, name, &nsets, &bsize, &assoc, &replacement_policy,
+                            &max_counter_value, &ways_to_save);
+        cache_dl1 = cache_create(name, nsets, bsize, /* balloc */FALSE,
+			          /* usize */0, assoc, replacement_policy,
+			                     dl1_access_fn, /* hit lat */cache_dl1_lat,
+                                 max_counter_value, ways_to_save);
 
         /* is the level 2 D-cache defined? */
         if (!mystricmp(cache_dl2_opt, "none"))
             cache_dl2 = NULL;
         else {
-            if (sscanf(cache_dl2_opt, "%[^:]:%d:%d:%d:%c", name, &nsets, &bsize, &assoc, &c) < 5)
-                fatal("bad l2 D-cache parms: <name>:<nsets>:<bsize>:<assoc>:<repl>");
-
-            replacement_policy = cache_char2policy(c);
-
-            if(replacement_policy == PLRU) {
-                if(sscanf(cache_dl2_opt, "%[^:]:%d:%d:%d:%c:%u:%u", name, &nsets, &bsize, &assoc, &c, &max_counter_value, &ways_to_save) != 7)
-                    fatal("bad l2 D-cache parms for protected LRU: <name>:<nsets>:<bsize>:<assoc>:p:<max_counter>:<ways to save>");
-                cache_dl2 = cache_create(name, nsets, bsize, /* balloc */FALSE,
-                              /* usize */0, assoc, replacement_policy,
-                                         dl2_access_fn, /* hit lat */cache_dl2_lat,
-                                         max_counter_value, ways_to_save);
-            }
-            else {
-                cache_dl2 = cache_create(name, nsets, bsize, /* balloc */FALSE,
-                              /* usize */0, assoc, replacement_policy,
-                                         dl2_access_fn, /* hit lat */cache_dl2_lat,
-                                         0, 0);
-            }
+            parse_cache_cmdline(cache_dl2_opt, name, &nsets, &bsize, &assoc, &replacement_policy,
+                                &max_counter_value, &ways_to_save);
+            cache_dl2 = cache_create(name, nsets, bsize, /* balloc */FALSE,
+                          /* usize */0, assoc, replacement_policy,
+                                     dl2_access_fn, /* hit lat */cache_dl2_lat,
+                                     max_counter_value, ways_to_save);
 	    }
     }
 
@@ -1092,13 +1087,12 @@ sim_check_options(struct opt_odb_t *odb,        /* options database */
     }
   else /* il1 is defined */
     {
-      if (sscanf(cache_il1_opt, "%[^:]:%d:%d:%d:%c",
-		 name, &nsets, &bsize, &assoc, &c) != 5)
-	fatal("bad l1 I-cache parms: <name>:<nsets>:<bsize>:<assoc>:<repl>");
-      cache_il1 = cache_create(name, nsets, bsize, /* balloc */FALSE,
-			       /* usize */0, assoc, cache_char2policy(c),
-			       il1_access_fn, /* hit lat */cache_il1_lat,
-                   0, 0);
+        parse_cache_cmdline(cache_il1_opt, name, &nsets, &bsize, &assoc, &replacement_policy,
+                            &max_counter_value, &ways_to_save);
+        cache_il1 = cache_create(name, nsets, bsize, /* balloc */FALSE,
+			          /* usize */0, assoc, replacement_policy,
+			                     il1_access_fn, /* hit lat */cache_il1_lat,
+                                 max_counter_value, ways_to_save);
 
       /* is the level 2 D-cache defined? */
       if (!mystricmp(cache_il2_opt, "none"))
@@ -1111,14 +1105,12 @@ sim_check_options(struct opt_odb_t *odb,        /* options database */
 	}
       else
 	{
-	  if (sscanf(cache_il2_opt, "%[^:]:%d:%d:%d:%c",
-		     name, &nsets, &bsize, &assoc, &c) != 5)
-	    fatal("bad l2 I-cache parms: "
-		  "<name>:<nsets>:<bsize>:<assoc>:<repl>");
-	  cache_il2 = cache_create(name, nsets, bsize, /* balloc */FALSE,
-				   /* usize */0, assoc, cache_char2policy(c),
-				   il2_access_fn, /* hit lat */cache_il2_lat,
-                   0, 0);
+        parse_cache_cmdline(cache_il2_opt, name, &nsets, &bsize, &assoc, &replacement_policy,
+                            &max_counter_value, &ways_to_save);
+	    cache_il2 = cache_create(name, nsets, bsize, /* balloc */FALSE,
+				    /* usize */  0, assoc, replacement_policy,
+				                 il2_access_fn, /* hit lat */cache_il2_lat,
+                                 max_counter_value, ways_to_save);
 	}
     }
 
