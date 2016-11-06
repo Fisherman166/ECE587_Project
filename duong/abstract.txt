@@ -1,0 +1,17 @@
+Title
+"SCORE: A Score-Based Memory Cache Replacement Policy"
+
+Abstract
+We propose SCORE, a novel adaptive cache replacement policy, which uses a score
+system to select a cache line to replace. Results show that SCORE offers low
+overall miss rates on SPEC CPU2006 benchmarks, and provides an average IPC that
+is 4.9% higher than LRU and 7.4% higher than LIP.
+
+Authors
+Nam Duong, Rosario Cammarota, Dali Zhao, Taesu Kim, Alex Veidenbaum
+Department of Computer Science
+University of California, Irvine
+{nlduong, rosario.c, daliz, tkim15, alexv}@ics.uci.edu
+
+Contact:
+Nam Duong, nlduong@ics.uci.edu

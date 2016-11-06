@@ -58,6 +58,7 @@
 #include "machine.h"
 #include "cache.h"
 #include "protected_LRU.h"
+#include "score.h"
 
 /* cache access macros */
 #define CACHE_TAG(cp, addr)	((addr) >> (cp)->tag_shift)
@@ -415,6 +416,13 @@ cache_create(char *name,		/* name of the cache */
       init_protected_LRU(cp, max_counter_value, ways_to_save);
       debug_print("After init cache\n");
   }
+
+  if(policy == SCORE) {
+      debug_file = fopen("debug_out.log", "w");
+      if(debug_file == NULL) fatal("FAILED TO OPEN DEBUG FILE\n");
+      score_init(cp);
+      debug_print("After init cache\n");
+  }
   return cp;
 }
 
@@ -427,6 +435,7 @@ cache_char2policy(char c)		/* replacement policy as a char */
   case 'r': return Random;
   case 'f': return FIFO;
   case 'p': return PLRU;
+  case 's': return SCORE;
   default: fatal("bogus replacement policy, `%c'", c);
   }
 }
@@ -603,6 +612,15 @@ cache_access(struct cache_t *cp,	/* cache to access */
     debug_print("Before evict PLRU\n");
     repl = get_protected_LRU_victim(&cp->sets[set], cp->assoc);
     debug_print("After evict PLRU\n");
+    break;
+  case SCORE:
+    debug_print("Before evict SCORE \n");
+    repl = score_select_victim(&cp->sets[set], cp->assoc);
+    debug_print("After evict SCORE\n");
+    score_update_state(&cp->sets[set], blk, false, cp->assoc);
+    break;
+
+	
   default:
     panic("bogus replacement policy");
   }
@@ -701,6 +719,11 @@ cache_access(struct cache_t *cp,	/* cache to access */
   if(cp->policy == PLRU) {
       debug_print("pLRU slow hit\n");
       update_protected_LRU(&cp->sets[set], blk);
+   }
+  if(cp->policy == SCORE) {
+      debug_print("SCORE slow hit\n");
+      score_update_state(&cp->sets[set], blk, true, cp->assoc);
+
   }
 
   /* tag is unchanged, so hash links (if they exist) are still valid */
