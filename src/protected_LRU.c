@@ -11,6 +11,8 @@
 #include "protected_LRU.h"
 #include "misc.h"
 
+#define DEBUG
+
 static uint32_t max_counter_value = 0;
 static uint32_t ways_to_save_on_eviction = 0;
 
@@ -20,6 +22,19 @@ typedef struct {
     bool ignore;    // Is one of the ways to save
 } validWay;
 
+static FILE* DEBUG_FILE = NULL;
+
+static void open_debug() {
+    DEBUG_FILE = fopen("pLRU_debug.log", "w");
+    if(DEBUG_FILE == NULL) {
+        fatal("Failed to open pLRU debug FILE");
+    }
+}
+
+static void write_debug(const char* string) {
+    fprintf(DEBUG_FILE, "%s", string);
+    fflush(DEBUG_FILE);
+}
 
 //*****************************************************************************
 // Functions
@@ -42,6 +57,9 @@ void init_protected_LRU(struct cache_t* cache, unsigned int counter_value_max, u
             current_way = current_way->way_next;
         }
     }
+    #ifdef DEBUG
+    open_debug();
+    #endif
 }
 
 void update_protected_LRU(struct cache_set_t* hit_set, struct cache_blk_t* hit_block) {
@@ -59,6 +77,10 @@ void update_protected_LRU(struct cache_set_t* hit_set, struct cache_blk_t* hit_b
 }
 
 struct cache_blk_t* get_protected_LRU_victim(struct cache_set_t* miss_set, int assoc) {
+    #ifdef DEBUG
+    char text[200];
+    #endif
+
     // Build up an array of valid ways
     validWay valid_ways[assoc];
     struct cache_blk_t* current_way = miss_set->way_head;
@@ -79,12 +101,21 @@ struct cache_blk_t* get_protected_LRU_victim(struct cache_set_t* miss_set, int a
         uint32_t largest_counter = 0;
         validWay* largest_counter_way = NULL;
         for(way = 0; way < assoc; way++) {
+            #ifdef DEBUG
+            sprintf(text, "Current access count = %u\n", valid_ways[way].access_number);
+            write_debug(text);
+            #endif
+
             if(valid_ways[way].ignore) continue;
             if( (largest_counter_way == NULL) || (valid_ways[way].access_number > largest_counter) ) {
                 largest_counter = valid_ways[way].access_number;
                 largest_counter_way = &valid_ways[way];
             }
         }
+        #ifdef DEBUG
+        sprintf(text, "Counter to ignore = %u\n", largest_counter_way->cache_line->access_counter);
+        write_debug(text);
+        #endif
         largest_counter_way->ignore = true;
     }
 
@@ -94,6 +125,10 @@ struct cache_blk_t* get_protected_LRU_victim(struct cache_set_t* miss_set, int a
         if(valid_ways[way].ignore) continue;
         if( way > LRU_stack_position ) LRU_stack_position = way;
     }
+    #ifdef DEBUG
+    sprintf(text, "Remove way with access count = %u\n", valid_ways[LRU_stack_position].cache_line->access_counter);
+    write_debug(text);
+    #endif
     valid_ways[LRU_stack_position].cache_line->access_counter = 0;
     return valid_ways[LRU_stack_position].cache_line;
 }
