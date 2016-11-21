@@ -1,0 +1,608 @@
+Benchmark Logs: 
+Mem Latency: 150
+Mem Latency: 10
+%%%%%%%%%%%%%   Benchmark:  go %%%%%%%%%%%%%%
+*****************    dl1:256:64:16     **********************************
+results/W_Latency/go_LRU_dl1_256_64_16.out:sim_IPC          1.2284  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_256_64_16_p_9_12.out:sim_IPC  1.2218  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_256_64_16.out:sim_IPC        1.2185  #  instructions  per  cycle
+*****************    dl1:256:64:8     **********************************
+results/W_Latency/go_LRU_dl1_256_64_8.out:sim_IPC         1.2276  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_256_64_8_p_5_6.out:sim_IPC  1.2212  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_256_64_8.out:sim_IPC       1.2034  #  instructions  per  cycle
+*****************    dl1:256:64:4     **********************************
+results/W_Latency/go_LRU_dl1_256_64_4.out:sim_IPC         0.9952  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_256_64_4_p_3_3.out:sim_IPC  1.0128  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_256_64_4.out:sim_IPC       1.0158  #  instructions  per  cycle
+*****************    dl1:256:32:16     **********************************
+results/W_Latency/go_LRU_dl1_256_32_16.out:sim_IPC          1.2221  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_256_32_16_p_9_12.out:sim_IPC  1.2162  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_256_32_16.out:sim_IPC        1.1323  #  instructions  per  cycle
+*****************    dl1:256:32:8     **********************************
+results/W_Latency/go_LRU_dl1_256_32_8.out:sim_IPC         1.0972  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_256_32_8_p_5_6.out:sim_IPC  1.1208  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_256_32_8.out:sim_IPC       1.0832  #  instructions  per  cycle
+*****************    dl1:256:32:4     **********************************
+results/W_Latency/go_LRU_dl1_256_32_4.out:sim_IPC         0.7946  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_256_32_4_p_3_3.out:sim_IPC  0.8038  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_256_32_4.out:sim_IPC       0.8060  #  instructions  per  cycle
+*****************    dl1:128:64:16     **********************************
+results/W_Latency/go_LRU_dl1_128_64_16.out:sim_IPC          1.2284  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_128_64_16_p_9_12.out:sim_IPC  1.2211  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_128_64_16.out:sim_IPC        1.1342  #  instructions  per  cycle
+*****************    dl1:128:64:8     **********************************
+results/W_Latency/go_LRU_dl1_128_64_8.out:sim_IPC         1.0445  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_128_64_8_p_5_6.out:sim_IPC  1.0736  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_128_64_8.out:sim_IPC       1.0598  #  instructions  per  cycle
+*****************    dl1:128:64:4     **********************************
+results/W_Latency/go_LRU_dl1_128_64_4.out:sim_IPC         0.7790  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_128_64_4_p_3_3.out:sim_IPC  0.7858  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_128_64_4.out:sim_IPC       0.7876  #  instructions  per  cycle
+*****************    dl1:128:32:16     **********************************
+results/W_Latency/go_LRU_dl1_128_32_16.out:sim_IPC          1.1605  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_128_32_16_p_9_12.out:sim_IPC  1.1689  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_128_32_16.out:sim_IPC        1.0110  #  instructions  per  cycle
+*****************    dl1:128:32:8     **********************************
+results/W_Latency/go_LRU_dl1_128_32_8.out:sim_IPC         0.7855  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_128_32_8_p_5_6.out:sim_IPC  0.8031  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_128_32_8.out:sim_IPC       0.8146  #  instructions  per  cycle
+*****************    dl1:128:32:4     **********************************
+results/W_Latency/go_LRU_dl1_128_32_4.out:sim_IPC         0.7547  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_128_32_4_p_3_3.out:sim_IPC  0.7527  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_128_32_4.out:sim_IPC       0.7525  #  instructions  per  cycle
+*****************    dl1:64:64:16     **********************************
+results/W_Latency/go_LRU_dl1_64_64_16.out:sim_IPC          1.0920  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_64_64_16_p_9_12.out:sim_IPC  1.1255  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_64_64_16.out:sim_IPC        0.9900  #  instructions  per  cycle
+*****************    dl1:64:64:8     **********************************
+results/W_Latency/go_LRU_dl1_64_64_8.out:sim_IPC         0.7778  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_64_64_8_p_5_6.out:sim_IPC  0.7883  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_64_64_8.out:sim_IPC       0.8022  #  instructions  per  cycle
+*****************    dl1:64:64:4     **********************************
+results/W_Latency/go_LRU_dl1_64_64_4.out:sim_IPC         0.7553  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_64_64_4_p_3_3.out:sim_IPC  0.7504  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_64_64_4.out:sim_IPC       0.7502  #  instructions  per  cycle
+*****************    dl1:64:32:16     **********************************
+results/W_Latency/go_LRU_dl1_64_32_16.out:sim_IPC          0.7763  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_64_32_16_p_9_12.out:sim_IPC  0.7977  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_64_32_16.out:sim_IPC        0.8238  #  instructions  per  cycle
+*****************    dl1:64:32:8     **********************************
+results/W_Latency/go_LRU_dl1_64_32_8.out:sim_IPC         0.7560  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_64_32_8_p_5_6.out:sim_IPC  0.7519  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_64_32_8.out:sim_IPC       0.7513  #  instructions  per  cycle
+*****************    dl1:64:32:4     **********************************
+results/W_Latency/go_LRU_dl1_64_32_4.out:sim_IPC         0.7484  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_64_32_4_p_3_3.out:sim_IPC  0.7438  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_64_32_4.out:sim_IPC       0.7439  #  instructions  per  cycle
+*****************    dl1:32:64:16     **********************************
+results/W_Latency/go_LRU_dl1_32_64_16.out:sim_IPC          0.7734  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_32_64_16_p_9_12.out:sim_IPC  0.7851  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_32_64_16.out:sim_IPC        0.8397  #  instructions  per  cycle
+*****************    dl1:32:64:8     **********************************
+results/W_Latency/go_LRU_dl1_32_64_8.out:sim_IPC         0.7574  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_32_64_8_p_5_6.out:sim_IPC  0.7503  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_32_64_8.out:sim_IPC       0.7504  #  instructions  per  cycle
+*****************    dl1:32:64:4     **********************************
+results/W_Latency/go_LRU_dl1_32_64_4.out:sim_IPC         0.7463  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_32_64_4_p_3_3.out:sim_IPC  0.7379  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_32_64_4.out:sim_IPC       0.7380  #  instructions  per  cycle
+*****************    dl1:32:32:16     **********************************
+results/W_Latency/go_LRU_dl1_32_32_16.out:sim_IPC          0.7561  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_32_32_16_p_9_12.out:sim_IPC  0.7488  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_32_32_16.out:sim_IPC        0.7572  #  instructions  per  cycle
+*****************    dl1:32:32:8     **********************************
+results/W_Latency/go_LRU_dl1_32_32_8.out:sim_IPC         0.7498  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_32_32_8_p_5_6.out:sim_IPC  0.7409  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_32_32_8.out:sim_IPC       0.7408  #  instructions  per  cycle
+*****************    dl1:32:32:4     **********************************
+results/W_Latency/go_LRU_dl1_32_32_4.out:sim_IPC         0.7373  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_32_32_4_p_3_3.out:sim_IPC  0.7291  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_32_32_4.out:sim_IPC       0.7292  #  instructions  per  cycle
+*****************    dl1:16:64:16     **********************************
+results/W_Latency/go_LRU_dl1_16_64_16.out:sim_IPC          0.7576  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_16_64_16_p_9_12.out:sim_IPC  0.7456  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_16_64_16.out:sim_IPC        0.7589  #  instructions  per  cycle
+*****************    dl1:16:64:8     **********************************
+results/W_Latency/go_LRU_dl1_16_64_8.out:sim_IPC         0.7494  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_16_64_8_p_5_6.out:sim_IPC  0.7349  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_16_64_8.out:sim_IPC       0.7359  #  instructions  per  cycle
+*****************    dl1:16:64:4     **********************************
+results/W_Latency/go_LRU_dl1_16_64_4.out:sim_IPC         0.7280  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_16_64_4_p_3_3.out:sim_IPC  0.7170  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_16_64_4.out:sim_IPC       0.7172  #  instructions  per  cycle
+*****************    dl1:16:32:16     **********************************
+results/W_Latency/go_LRU_dl1_16_32_16.out:sim_IPC          0.7504  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_16_32_16_p_9_12.out:sim_IPC  0.7346  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_16_32_16.out:sim_IPC        0.7370  #  instructions  per  cycle
+*****************    dl1:16:32:8     **********************************
+results/W_Latency/go_LRU_dl1_16_32_8.out:sim_IPC         0.7392  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_16_32_8_p_5_6.out:sim_IPC  0.7222  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_16_32_8.out:sim_IPC       0.7235  #  instructions  per  cycle
+*****************    dl1:16:32:4     **********************************
+results/W_Latency/go_LRU_dl1_16_32_4.out:sim_IPC         0.7187  #  instructions  per  cycle
+results/W_Latency/go_PLRU_dl1_16_32_4_p_3_3.out:sim_IPC  0.7062  #  instructions  per  cycle
+results/W_Latency/go_SCORE_dl1_16_32_4.out:sim_IPC       0.7065  #  instructions  per  cycle
+%%%%%%%%%%%%%   Benchmark:  gcc %%%%%%%%%%%%%%
+*****************    dl1:256:64:16     **********************************
+results/W_Latency/gcc_LRU_dl1_256_64_16.out:sim_IPC          0.7252  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_256_64_16_p_9_12.out:sim_IPC  0.7244  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_256_64_16.out:sim_IPC        0.7165  #  instructions  per  cycle
+*****************    dl1:256:64:8     **********************************
+results/W_Latency/gcc_LRU_dl1_256_64_8.out:sim_IPC         0.7192  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_256_64_8_p_5_6.out:sim_IPC  0.7185  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_256_64_8.out:sim_IPC       0.7162  #  instructions  per  cycle
+*****************    dl1:256:64:4     **********************************
+results/W_Latency/gcc_LRU_dl1_256_64_4.out:sim_IPC         0.7110  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_256_64_4_p_3_3.out:sim_IPC  0.7111  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_256_64_4.out:sim_IPC       0.7107  #  instructions  per  cycle
+*****************    dl1:256:32:16     **********************************
+results/W_Latency/gcc_LRU_dl1_256_32_16.out:sim_IPC          0.7174  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_256_32_16_p_9_12.out:sim_IPC  0.7160  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_256_32_16.out:sim_IPC        0.7092  #  instructions  per  cycle
+*****************    dl1:256:32:8     **********************************
+results/W_Latency/gcc_LRU_dl1_256_32_8.out:sim_IPC         0.7132  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_256_32_8_p_5_6.out:sim_IPC  0.7119  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_256_32_8.out:sim_IPC       0.7091  #  instructions  per  cycle
+*****************    dl1:256:32:4     **********************************
+results/W_Latency/gcc_LRU_dl1_256_32_4.out:sim_IPC         0.7018  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_256_32_4_p_3_3.out:sim_IPC  0.7020  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_256_32_4.out:sim_IPC       0.7017  #  instructions  per  cycle
+*****************    dl1:128:64:16     **********************************
+results/W_Latency/gcc_LRU_dl1_128_64_16.out:sim_IPC          0.7193  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_128_64_16_p_9_12.out:sim_IPC  0.7183  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_128_64_16.out:sim_IPC        0.7133  #  instructions  per  cycle
+*****************    dl1:128:64:8     **********************************
+results/W_Latency/gcc_LRU_dl1_128_64_8.out:sim_IPC         0.7145  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_128_64_8_p_5_6.out:sim_IPC  0.7138  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_128_64_8.out:sim_IPC       0.7110  #  instructions  per  cycle
+*****************    dl1:128:64:4     **********************************
+results/W_Latency/gcc_LRU_dl1_128_64_4.out:sim_IPC         0.7008  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_128_64_4_p_3_3.out:sim_IPC  0.7013  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_128_64_4.out:sim_IPC       0.7011  #  instructions  per  cycle
+*****************    dl1:128:32:16     **********************************
+results/W_Latency/gcc_LRU_dl1_128_32_16.out:sim_IPC          0.7139  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_128_32_16_p_9_12.out:sim_IPC  0.7118  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_128_32_16.out:sim_IPC        0.7046  #  instructions  per  cycle
+*****************    dl1:128:32:8     **********************************
+results/W_Latency/gcc_LRU_dl1_128_32_8.out:sim_IPC         0.7036  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_128_32_8_p_5_6.out:sim_IPC  0.7032  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_128_32_8.out:sim_IPC       0.7013  #  instructions  per  cycle
+*****************    dl1:128:32:4     **********************************
+results/W_Latency/gcc_LRU_dl1_128_32_4.out:sim_IPC         0.6910  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_128_32_4_p_3_3.out:sim_IPC  0.6917  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_128_32_4.out:sim_IPC       0.6915  #  instructions  per  cycle
+*****************    dl1:64:64:16     **********************************
+results/W_Latency/gcc_LRU_dl1_64_64_16.out:sim_IPC          0.7154  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_64_64_16_p_9_12.out:sim_IPC  0.7141  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_64_64_16.out:sim_IPC        0.7046  #  instructions  per  cycle
+*****************    dl1:64:64:8     **********************************
+results/W_Latency/gcc_LRU_dl1_64_64_8.out:sim_IPC         0.7016  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_64_64_8_p_5_6.out:sim_IPC  0.7027  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_64_64_8.out:sim_IPC       0.7012  #  instructions  per  cycle
+*****************    dl1:64:64:4     **********************************
+results/W_Latency/gcc_LRU_dl1_64_64_4.out:sim_IPC         0.6898  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_64_64_4_p_3_3.out:sim_IPC  0.6902  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_64_64_4.out:sim_IPC       0.6903  #  instructions  per  cycle
+*****************    dl1:64:32:16     **********************************
+results/W_Latency/gcc_LRU_dl1_64_32_16.out:sim_IPC          0.7045  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_64_32_16_p_9_12.out:sim_IPC  0.7041  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_64_32_16.out:sim_IPC        0.6963  #  instructions  per  cycle
+*****************    dl1:64:32:8     **********************************
+results/W_Latency/gcc_LRU_dl1_64_32_8.out:sim_IPC         0.6915  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_64_32_8_p_5_6.out:sim_IPC  0.6926  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_64_32_8.out:sim_IPC       0.6921  #  instructions  per  cycle
+*****************    dl1:64:32:4     **********************************
+results/W_Latency/gcc_LRU_dl1_64_32_4.out:sim_IPC         0.6844  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_64_32_4_p_3_3.out:sim_IPC  0.6842  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_64_32_4.out:sim_IPC       0.6842  #  instructions  per  cycle
+*****************    dl1:32:64:16     **********************************
+results/W_Latency/gcc_LRU_dl1_32_64_16.out:sim_IPC          0.7028  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_32_64_16_p_9_12.out:sim_IPC  0.7036  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_32_64_16.out:sim_IPC        0.6964  #  instructions  per  cycle
+*****************    dl1:32:64:8     **********************************
+results/W_Latency/gcc_LRU_dl1_32_64_8.out:sim_IPC         0.6907  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_32_64_8_p_5_6.out:sim_IPC  0.6912  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_32_64_8.out:sim_IPC       0.6912  #  instructions  per  cycle
+*****************    dl1:32:64:4     **********************************
+results/W_Latency/gcc_LRU_dl1_32_64_4.out:sim_IPC         0.6836  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_32_64_4_p_3_3.out:sim_IPC  0.6834  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_32_64_4.out:sim_IPC       0.6834  #  instructions  per  cycle
+*****************    dl1:32:32:16     **********************************
+results/W_Latency/gcc_LRU_dl1_32_32_16.out:sim_IPC          0.6918  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_32_32_16_p_9_12.out:sim_IPC  0.6936  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_32_32_16.out:sim_IPC        0.6892  #  instructions  per  cycle
+*****************    dl1:32:32:8     **********************************
+results/W_Latency/gcc_LRU_dl1_32_32_8.out:sim_IPC         0.6853  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_32_32_8_p_5_6.out:sim_IPC  0.6850  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_32_32_8.out:sim_IPC       0.6850  #  instructions  per  cycle
+*****************    dl1:32:32:4     **********************************
+results/W_Latency/gcc_LRU_dl1_32_32_4.out:sim_IPC         0.6769  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_32_32_4_p_3_3.out:sim_IPC  0.6759  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_32_32_4.out:sim_IPC       0.6760  #  instructions  per  cycle
+*****************    dl1:16:64:16     **********************************
+results/W_Latency/gcc_LRU_dl1_16_64_16.out:sim_IPC          0.6910  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_16_64_16_p_9_12.out:sim_IPC  0.6920  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_16_64_16.out:sim_IPC        0.6902  #  instructions  per  cycle
+*****************    dl1:16:64:8     **********************************
+results/W_Latency/gcc_LRU_dl1_16_64_8.out:sim_IPC         0.6850  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_16_64_8_p_5_6.out:sim_IPC  0.6844  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_16_64_8.out:sim_IPC       0.6844  #  instructions  per  cycle
+*****************    dl1:16:64:4     **********************************
+results/W_Latency/gcc_LRU_dl1_16_64_4.out:sim_IPC         0.6756  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_16_64_4_p_3_3.out:sim_IPC  0.6746  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_16_64_4.out:sim_IPC       0.6746  #  instructions  per  cycle
+*****************    dl1:16:32:16     **********************************
+results/W_Latency/gcc_LRU_dl1_16_32_16.out:sim_IPC          0.6858  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_16_32_16_p_9_12.out:sim_IPC  0.6846  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_16_32_16.out:sim_IPC        0.6824  #  instructions  per  cycle
+*****************    dl1:16:32:8     **********************************
+results/W_Latency/gcc_LRU_dl1_16_32_8.out:sim_IPC         0.6784  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_16_32_8_p_5_6.out:sim_IPC  0.6760  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_16_32_8.out:sim_IPC       0.6762  #  instructions  per  cycle
+*****************    dl1:16:32:4     **********************************
+results/W_Latency/gcc_LRU_dl1_16_32_4.out:sim_IPC         0.6679  #  instructions  per  cycle
+results/W_Latency/gcc_PLRU_dl1_16_32_4_p_3_3.out:sim_IPC  0.6656  #  instructions  per  cycle
+results/W_Latency/gcc_SCORE_dl1_16_32_4.out:sim_IPC       0.6657  #  instructions  per  cycle
+%%%%%%%%%%%%%   Benchmark:  li %%%%%%%%%%%%%%
+*****************    dl1:256:64:16     **********************************
+results/W_Latency/li_LRU_dl1_256_64_16.out:sim_IPC          1.5799  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_256_64_16_p_9_12.out:sim_IPC  1.5799  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_256_64_16.out:sim_IPC        1.5787  #  instructions  per  cycle
+*****************    dl1:256:64:8     **********************************
+results/W_Latency/li_LRU_dl1_256_64_8.out:sim_IPC         1.5796  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_256_64_8_p_5_6.out:sim_IPC  1.5796  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_256_64_8.out:sim_IPC       1.5782  #  instructions  per  cycle
+*****************    dl1:256:64:4     **********************************
+results/W_Latency/li_LRU_dl1_256_64_4.out:sim_IPC         1.5549  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_256_64_4_p_3_3.out:sim_IPC  1.5550  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_256_64_4.out:sim_IPC       1.5553  #  instructions  per  cycle
+*****************    dl1:256:32:16     **********************************
+results/W_Latency/li_LRU_dl1_256_32_16.out:sim_IPC          1.5790  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_256_32_16_p_9_12.out:sim_IPC  1.5789  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_256_32_16.out:sim_IPC        1.5726  #  instructions  per  cycle
+*****************    dl1:256:32:8     **********************************
+results/W_Latency/li_LRU_dl1_256_32_8.out:sim_IPC         1.5373  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_256_32_8_p_5_6.out:sim_IPC  1.5376  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_256_32_8.out:sim_IPC       1.5402  #  instructions  per  cycle
+*****************    dl1:256:32:4     **********************************
+results/W_Latency/li_LRU_dl1_256_32_4.out:sim_IPC         1.5201  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_256_32_4_p_3_3.out:sim_IPC  1.5203  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_256_32_4.out:sim_IPC       1.5199  #  instructions  per  cycle
+*****************    dl1:128:64:16     **********************************
+results/W_Latency/li_LRU_dl1_128_64_16.out:sim_IPC          1.5796  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_128_64_16_p_9_12.out:sim_IPC  1.5795  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_128_64_16.out:sim_IPC        1.5750  #  instructions  per  cycle
+*****************    dl1:128:64:8     **********************************
+results/W_Latency/li_LRU_dl1_128_64_8.out:sim_IPC         1.5550  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_128_64_8_p_5_6.out:sim_IPC  1.5551  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_128_64_8.out:sim_IPC       1.5564  #  instructions  per  cycle
+*****************    dl1:128:64:4     **********************************
+results/W_Latency/li_LRU_dl1_128_64_4.out:sim_IPC         1.5410  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_128_64_4_p_3_3.out:sim_IPC  1.5410  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_128_64_4.out:sim_IPC       1.5406  #  instructions  per  cycle
+*****************    dl1:128:32:16     **********************************
+results/W_Latency/li_LRU_dl1_128_32_16.out:sim_IPC          1.5369  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_128_32_16_p_9_12.out:sim_IPC  1.5378  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_128_32_16.out:sim_IPC        1.5429  #  instructions  per  cycle
+*****************    dl1:128:32:8     **********************************
+results/W_Latency/li_LRU_dl1_128_32_8.out:sim_IPC         1.5203  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_128_32_8_p_5_6.out:sim_IPC  1.5204  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_128_32_8.out:sim_IPC       1.5197  #  instructions  per  cycle
+*****************    dl1:128:32:4     **********************************
+results/W_Latency/li_LRU_dl1_128_32_4.out:sim_IPC         1.5076  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_128_32_4_p_3_3.out:sim_IPC  1.5073  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_128_32_4.out:sim_IPC       1.5066  #  instructions  per  cycle
+*****************    dl1:64:64:16     **********************************
+results/W_Latency/li_LRU_dl1_64_64_16.out:sim_IPC          1.5551  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_64_64_16_p_9_12.out:sim_IPC  1.5556  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_64_64_16.out:sim_IPC        1.5564  #  instructions  per  cycle
+*****************    dl1:64:64:8     **********************************
+results/W_Latency/li_LRU_dl1_64_64_8.out:sim_IPC         1.5416  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_64_64_8_p_5_6.out:sim_IPC  1.5416  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_64_64_8.out:sim_IPC       1.5403  #  instructions  per  cycle
+*****************    dl1:64:64:4     **********************************
+results/W_Latency/li_LRU_dl1_64_64_4.out:sim_IPC         1.5287  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_64_64_4_p_3_3.out:sim_IPC  1.5286  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_64_64_4.out:sim_IPC       1.5280  #  instructions  per  cycle
+*****************    dl1:64:32:16     **********************************
+results/W_Latency/li_LRU_dl1_64_32_16.out:sim_IPC          1.5202  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_64_32_16_p_9_12.out:sim_IPC  1.5205  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_64_32_16.out:sim_IPC        1.5170  #  instructions  per  cycle
+*****************    dl1:64:32:8     **********************************
+results/W_Latency/li_LRU_dl1_64_32_8.out:sim_IPC         1.5095  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_64_32_8_p_5_6.out:sim_IPC  1.5090  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_64_32_8.out:sim_IPC       1.5060  #  instructions  per  cycle
+*****************    dl1:64:32:4     **********************************
+results/W_Latency/li_LRU_dl1_64_32_4.out:sim_IPC         1.4937  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_64_32_4_p_3_3.out:sim_IPC  1.4927  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_64_32_4.out:sim_IPC       1.4922  #  instructions  per  cycle
+*****************    dl1:32:64:16     **********************************
+results/W_Latency/li_LRU_dl1_32_64_16.out:sim_IPC          1.5419  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_32_64_16_p_9_12.out:sim_IPC  1.5417  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_32_64_16.out:sim_IPC        1.5370  #  instructions  per  cycle
+*****************    dl1:32:64:8     **********************************
+results/W_Latency/li_LRU_dl1_32_64_8.out:sim_IPC         1.5302  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_32_64_8_p_5_6.out:sim_IPC  1.5299  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_32_64_8.out:sim_IPC       1.5272  #  instructions  per  cycle
+*****************    dl1:32:64:4     **********************************
+results/W_Latency/li_LRU_dl1_32_64_4.out:sim_IPC         1.5142  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_32_64_4_p_3_3.out:sim_IPC  1.5136  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_32_64_4.out:sim_IPC       1.5130  #  instructions  per  cycle
+*****************    dl1:32:32:16     **********************************
+results/W_Latency/li_LRU_dl1_32_32_16.out:sim_IPC          1.5097  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_32_32_16_p_9_12.out:sim_IPC  1.5091  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_32_32_16.out:sim_IPC        1.4993  #  instructions  per  cycle
+*****************    dl1:32:32:8     **********************************
+results/W_Latency/li_LRU_dl1_32_32_8.out:sim_IPC         1.4951  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_32_32_8_p_5_6.out:sim_IPC  1.4940  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_32_32_8.out:sim_IPC       1.4915  #  instructions  per  cycle
+*****************    dl1:32:32:4     **********************************
+results/W_Latency/li_LRU_dl1_32_32_4.out:sim_IPC         1.4764  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_32_32_4_p_3_3.out:sim_IPC  1.4748  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_32_32_4.out:sim_IPC       1.4742  #  instructions  per  cycle
+*****************    dl1:16:64:16     **********************************
+results/W_Latency/li_LRU_dl1_16_64_16.out:sim_IPC          1.5305  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_16_64_16_p_9_12.out:sim_IPC  1.5299  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_16_64_16.out:sim_IPC        1.5203  #  instructions  per  cycle
+*****************    dl1:16:64:8     **********************************
+results/W_Latency/li_LRU_dl1_16_64_8.out:sim_IPC         1.5163  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_16_64_8_p_5_6.out:sim_IPC  1.5151  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_16_64_8.out:sim_IPC       1.5125  #  instructions  per  cycle
+*****************    dl1:16:64:4     **********************************
+results/W_Latency/li_LRU_dl1_16_64_4.out:sim_IPC         1.4963  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_16_64_4_p_3_3.out:sim_IPC  1.4948  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_16_64_4.out:sim_IPC       1.4944  #  instructions  per  cycle
+*****************    dl1:16:32:16     **********************************
+results/W_Latency/li_LRU_dl1_16_32_16.out:sim_IPC          1.4961  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_16_32_16_p_9_12.out:sim_IPC  1.4941  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_16_32_16.out:sim_IPC        1.4831  #  instructions  per  cycle
+*****************    dl1:16:32:8     **********************************
+results/W_Latency/li_LRU_dl1_16_32_8.out:sim_IPC         1.4771  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_16_32_8_p_5_6.out:sim_IPC  1.4742  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_16_32_8.out:sim_IPC       1.4728  #  instructions  per  cycle
+*****************    dl1:16:32:4     **********************************
+results/W_Latency/li_LRU_dl1_16_32_4.out:sim_IPC         1.4546  #  instructions  per  cycle
+results/W_Latency/li_PLRU_dl1_16_32_4_p_3_3.out:sim_IPC  1.4518  #  instructions  per  cycle
+results/W_Latency/li_SCORE_dl1_16_32_4.out:sim_IPC       1.4515  #  instructions  per  cycle
+%%%%%%%%%%%%%   Benchmark:  ijpeg %%%%%%%%%%%%%%
+*****************    dl1:256:64:16     **********************************
+results/W_Latency/ijpeg_LRU_dl1_256_64_16.out:sim_IPC          1.8635  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_256_64_16_p_9_12.out:sim_IPC  1.8634  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_256_64_16.out:sim_IPC        1.8624  #  instructions  per  cycle
+*****************    dl1:256:64:8     **********************************
+results/W_Latency/ijpeg_LRU_dl1_256_64_8.out:sim_IPC         1.8634  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_256_64_8_p_5_6.out:sim_IPC  1.8634  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_256_64_8.out:sim_IPC       1.8618  #  instructions  per  cycle
+*****************    dl1:256:64:4     **********************************
+results/W_Latency/ijpeg_LRU_dl1_256_64_4.out:sim_IPC         1.8614  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_256_64_4_p_3_3.out:sim_IPC  1.8609  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_256_64_4.out:sim_IPC       1.8602  #  instructions  per  cycle
+*****************    dl1:256:32:16     **********************************
+results/W_Latency/ijpeg_LRU_dl1_256_32_16.out:sim_IPC          1.8592  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_256_32_16_p_9_12.out:sim_IPC  1.8586  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_256_32_16.out:sim_IPC        1.8524  #  instructions  per  cycle
+*****************    dl1:256:32:8     **********************************
+results/W_Latency/ijpeg_LRU_dl1_256_32_8.out:sim_IPC         1.8565  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_256_32_8_p_5_6.out:sim_IPC  1.8519  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_256_32_8.out:sim_IPC       1.8502  #  instructions  per  cycle
+*****************    dl1:256:32:4     **********************************
+results/W_Latency/ijpeg_LRU_dl1_256_32_4.out:sim_IPC         1.8511  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_256_32_4_p_3_3.out:sim_IPC  1.8321  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_256_32_4.out:sim_IPC       1.8448  #  instructions  per  cycle
+*****************    dl1:128:64:16     **********************************
+results/W_Latency/ijpeg_LRU_dl1_128_64_16.out:sim_IPC          1.8634  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_128_64_16_p_9_12.out:sim_IPC  1.8633  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_128_64_16.out:sim_IPC        1.8593  #  instructions  per  cycle
+*****************    dl1:128:64:8     **********************************
+results/W_Latency/ijpeg_LRU_dl1_128_64_8.out:sim_IPC         1.8616  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_128_64_8_p_5_6.out:sim_IPC  1.8570  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_128_64_8.out:sim_IPC       1.8567  #  instructions  per  cycle
+*****************    dl1:128:64:4     **********************************
+results/W_Latency/ijpeg_LRU_dl1_128_64_4.out:sim_IPC         1.8588  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_128_64_4_p_3_3.out:sim_IPC  1.8393  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_128_64_4.out:sim_IPC       1.8505  #  instructions  per  cycle
+*****************    dl1:128:32:16     **********************************
+results/W_Latency/ijpeg_LRU_dl1_128_32_16.out:sim_IPC          1.8566  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_128_32_16_p_9_12.out:sim_IPC  1.8483  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_128_32_16.out:sim_IPC        1.8413  #  instructions  per  cycle
+*****************    dl1:128:32:8     **********************************
+results/W_Latency/ijpeg_LRU_dl1_128_32_8.out:sim_IPC         1.8524  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_128_32_8_p_5_6.out:sim_IPC  1.8222  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_128_32_8.out:sim_IPC       1.8369  #  instructions  per  cycle
+*****************    dl1:128:32:4     **********************************
+results/W_Latency/ijpeg_LRU_dl1_128_32_4.out:sim_IPC         1.8463  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_128_32_4_p_3_3.out:sim_IPC  1.7769  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_128_32_4.out:sim_IPC       1.8153  #  instructions  per  cycle
+*****************    dl1:64:64:16     **********************************
+results/W_Latency/ijpeg_LRU_dl1_64_64_16.out:sim_IPC          1.8619  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_64_64_16_p_9_12.out:sim_IPC  1.8534  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_64_64_16.out:sim_IPC        1.8564  #  instructions  per  cycle
+*****************    dl1:64:64:8     **********************************
+results/W_Latency/ijpeg_LRU_dl1_64_64_8.out:sim_IPC         1.8596  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_64_64_8_p_5_6.out:sim_IPC  1.8282  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_64_64_8.out:sim_IPC       1.8463  #  instructions  per  cycle
+*****************    dl1:64:64:4     **********************************
+results/W_Latency/ijpeg_LRU_dl1_64_64_4.out:sim_IPC         1.8536  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_64_64_4_p_3_3.out:sim_IPC  1.7787  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_64_64_4.out:sim_IPC       1.8339  #  instructions  per  cycle
+*****************    dl1:64:32:16     **********************************
+results/W_Latency/ijpeg_LRU_dl1_64_32_16.out:sim_IPC          1.8530  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_64_32_16_p_9_12.out:sim_IPC  1.7688  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_64_32_16.out:sim_IPC        1.8169  #  instructions  per  cycle
+*****************    dl1:64:32:8     **********************************
+results/W_Latency/ijpeg_LRU_dl1_64_32_8.out:sim_IPC         1.8470  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_64_32_8_p_5_6.out:sim_IPC  1.7019  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_64_32_8.out:sim_IPC       1.7857  #  instructions  per  cycle
+*****************    dl1:64:32:4     **********************************
+results/W_Latency/ijpeg_LRU_dl1_64_32_4.out:sim_IPC         1.8350  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_64_32_4_p_3_3.out:sim_IPC  1.6941  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_64_32_4.out:sim_IPC       1.7434  #  instructions  per  cycle
+*****************    dl1:32:64:16     **********************************
+results/W_Latency/ijpeg_LRU_dl1_32_64_16.out:sim_IPC          1.8599  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_32_64_16_p_9_12.out:sim_IPC  1.7742  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_32_64_16.out:sim_IPC        1.8322  #  instructions  per  cycle
+*****************    dl1:32:64:8     **********************************
+results/W_Latency/ijpeg_LRU_dl1_32_64_8.out:sim_IPC         1.8542  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_32_64_8_p_5_6.out:sim_IPC  1.7141  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_32_64_8.out:sim_IPC       1.8191  #  instructions  per  cycle
+*****************    dl1:32:64:4     **********************************
+results/W_Latency/ijpeg_LRU_dl1_32_64_4.out:sim_IPC         1.8401  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_32_64_4_p_3_3.out:sim_IPC  1.7040  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_32_64_4.out:sim_IPC       1.7715  #  instructions  per  cycle
+*****************    dl1:32:32:16     **********************************
+results/W_Latency/ijpeg_LRU_dl1_32_32_16.out:sim_IPC          1.8467  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_32_32_16_p_9_12.out:sim_IPC  1.5566  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_32_32_16.out:sim_IPC        1.7142  #  instructions  per  cycle
+*****************    dl1:32:32:8     **********************************
+results/W_Latency/ijpeg_LRU_dl1_32_32_8.out:sim_IPC         1.8330  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_32_32_8_p_5_6.out:sim_IPC  1.5456  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_32_32_8.out:sim_IPC       1.6851  #  instructions  per  cycle
+*****************    dl1:32:32:4     **********************************
+results/W_Latency/ijpeg_LRU_dl1_32_32_4.out:sim_IPC         1.7628  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_32_32_4_p_3_3.out:sim_IPC  1.4701  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_32_32_4.out:sim_IPC       1.5972  #  instructions  per  cycle
+*****************    dl1:16:64:16     **********************************
+results/W_Latency/ijpeg_LRU_dl1_16_64_16.out:sim_IPC          1.8541  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_16_64_16_p_9_12.out:sim_IPC  1.5441  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_16_64_16.out:sim_IPC        1.7364  #  instructions  per  cycle
+*****************    dl1:16:64:8     **********************************
+results/W_Latency/ijpeg_LRU_dl1_16_64_8.out:sim_IPC         1.8391  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_16_64_8_p_5_6.out:sim_IPC  1.5335  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_16_64_8.out:sim_IPC       1.7138  #  instructions  per  cycle
+*****************    dl1:16:64:4     **********************************
+results/W_Latency/ijpeg_LRU_dl1_16_64_4.out:sim_IPC         1.7506  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_16_64_4_p_3_3.out:sim_IPC  1.4474  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_16_64_4.out:sim_IPC       1.5977  #  instructions  per  cycle
+*****************    dl1:16:32:16     **********************************
+results/W_Latency/ijpeg_LRU_dl1_16_32_16.out:sim_IPC          1.8390  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_16_32_16_p_9_12.out:sim_IPC  1.5344  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_16_32_16.out:sim_IPC        1.6709  #  instructions  per  cycle
+*****************    dl1:16:32:8     **********************************
+results/W_Latency/ijpeg_LRU_dl1_16_32_8.out:sim_IPC         1.8182  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_16_32_8_p_5_6.out:sim_IPC  1.5232  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_16_32_8.out:sim_IPC       1.6485  #  instructions  per  cycle
+*****************    dl1:16:32:4     **********************************
+results/W_Latency/ijpeg_LRU_dl1_16_32_4.out:sim_IPC         1.7449  #  instructions  per  cycle
+results/W_Latency/ijpeg_PLRU_dl1_16_32_4_p_3_3.out:sim_IPC  1.4352  #  instructions  per  cycle
+results/W_Latency/ijpeg_SCORE_dl1_16_32_4.out:sim_IPC       1.5508  #  instructions  per  cycle
+%%%%%%%%%%%%%   Benchmark:  perl %%%%%%%%%%%%%%
+*****************    dl1:256:64:16     **********************************
+results/W_Latency/perl_LRU_dl1_256_64_16.out:sim_IPC          1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_256_64_16_p_9_12.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_256_64_16.out:sim_IPC        1.2557  #  instructions  per  cycle
+*****************    dl1:256:64:8     **********************************
+results/W_Latency/perl_LRU_dl1_256_64_8.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_256_64_8_p_5_6.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_256_64_8.out:sim_IPC       1.2557  #  instructions  per  cycle
+*****************    dl1:256:64:4     **********************************
+results/W_Latency/perl_LRU_dl1_256_64_4.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_256_64_4_p_3_3.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_256_64_4.out:sim_IPC       1.2557  #  instructions  per  cycle
+*****************    dl1:256:32:16     **********************************
+results/W_Latency/perl_LRU_dl1_256_32_16.out:sim_IPC          1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_256_32_16_p_9_12.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_256_32_16.out:sim_IPC        1.2557  #  instructions  per  cycle
+*****************    dl1:256:32:8     **********************************
+results/W_Latency/perl_LRU_dl1_256_32_8.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_256_32_8_p_5_6.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_256_32_8.out:sim_IPC       1.2557  #  instructions  per  cycle
+*****************    dl1:256:32:4     **********************************
+results/W_Latency/perl_LRU_dl1_256_32_4.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_256_32_4_p_3_3.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_256_32_4.out:sim_IPC       1.2557  #  instructions  per  cycle
+*****************    dl1:128:64:16     **********************************
+results/W_Latency/perl_LRU_dl1_128_64_16.out:sim_IPC          1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_128_64_16_p_9_12.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_128_64_16.out:sim_IPC        1.2557  #  instructions  per  cycle
+*****************    dl1:128:64:8     **********************************
+results/W_Latency/perl_LRU_dl1_128_64_8.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_128_64_8_p_5_6.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_128_64_8.out:sim_IPC       1.2557  #  instructions  per  cycle
+*****************    dl1:128:64:4     **********************************
+results/W_Latency/perl_LRU_dl1_128_64_4.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_128_64_4_p_3_3.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_128_64_4.out:sim_IPC       1.2557  #  instructions  per  cycle
+*****************    dl1:128:32:16     **********************************
+results/W_Latency/perl_LRU_dl1_128_32_16.out:sim_IPC          1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_128_32_16_p_9_12.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_128_32_16.out:sim_IPC        1.2557  #  instructions  per  cycle
+*****************    dl1:128:32:8     **********************************
+results/W_Latency/perl_LRU_dl1_128_32_8.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_128_32_8_p_5_6.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_128_32_8.out:sim_IPC       1.2557  #  instructions  per  cycle
+*****************    dl1:128:32:4     **********************************
+results/W_Latency/perl_LRU_dl1_128_32_4.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_128_32_4_p_3_3.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_128_32_4.out:sim_IPC       1.2557  #  instructions  per  cycle
+*****************    dl1:64:64:16     **********************************
+results/W_Latency/perl_LRU_dl1_64_64_16.out:sim_IPC          1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_64_64_16_p_9_12.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_64_64_16.out:sim_IPC        1.2557  #  instructions  per  cycle
+*****************    dl1:64:64:8     **********************************
+results/W_Latency/perl_LRU_dl1_64_64_8.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_64_64_8_p_5_6.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_64_64_8.out:sim_IPC       1.2557  #  instructions  per  cycle
+*****************    dl1:64:64:4     **********************************
+results/W_Latency/perl_LRU_dl1_64_64_4.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_64_64_4_p_3_3.out:sim_IPC  1.2557  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_64_64_4.out:sim_IPC       1.2557  #  instructions  per  cycle
+*****************    dl1:64:32:16     **********************************
+results/W_Latency/perl_LRU_dl1_64_32_16.out:sim_IPC          1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_64_32_16_p_9_12.out:sim_IPC  1.2205  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_64_32_16.out:sim_IPC        1.2510  #  instructions  per  cycle
+*****************    dl1:64:32:8     **********************************
+results/W_Latency/perl_LRU_dl1_64_32_8.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_64_32_8_p_5_6.out:sim_IPC  1.2205  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_64_32_8.out:sim_IPC       1.2490  #  instructions  per  cycle
+*****************    dl1:64:32:4     **********************************
+results/W_Latency/perl_LRU_dl1_64_32_4.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_64_32_4_p_3_3.out:sim_IPC  1.2205  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_64_32_4.out:sim_IPC       1.2392  #  instructions  per  cycle
+*****************    dl1:32:64:16     **********************************
+results/W_Latency/perl_LRU_dl1_32_64_16.out:sim_IPC          1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_32_64_16_p_9_12.out:sim_IPC  1.2399  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_32_64_16.out:sim_IPC        1.2399  #  instructions  per  cycle
+*****************    dl1:32:64:8     **********************************
+results/W_Latency/perl_LRU_dl1_32_64_8.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_32_64_8_p_5_6.out:sim_IPC  1.2399  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_32_64_8.out:sim_IPC       1.2399  #  instructions  per  cycle
+*****************    dl1:32:64:4     **********************************
+results/W_Latency/perl_LRU_dl1_32_64_4.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_32_64_4_p_3_3.out:sim_IPC  1.2399  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_32_64_4.out:sim_IPC       1.2399  #  instructions  per  cycle
+*****************    dl1:32:32:16     **********************************
+results/W_Latency/perl_LRU_dl1_32_32_16.out:sim_IPC          1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_32_32_16_p_9_12.out:sim_IPC  1.2205  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_32_32_16.out:sim_IPC        1.2294  #  instructions  per  cycle
+*****************    dl1:32:32:8     **********************************
+results/W_Latency/perl_LRU_dl1_32_32_8.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_32_32_8_p_5_6.out:sim_IPC  1.2205  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_32_32_8.out:sim_IPC       1.2295  #  instructions  per  cycle
+*****************    dl1:32:32:4     **********************************
+results/W_Latency/perl_LRU_dl1_32_32_4.out:sim_IPC         1.2135  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_32_32_4_p_3_3.out:sim_IPC  1.2056  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_32_32_4.out:sim_IPC       1.2139  #  instructions  per  cycle
+*****************    dl1:16:64:16     **********************************
+results/W_Latency/perl_LRU_dl1_16_64_16.out:sim_IPC          1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_16_64_16_p_9_12.out:sim_IPC  1.2399  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_16_64_16.out:sim_IPC        1.2399  #  instructions  per  cycle
+*****************    dl1:16:64:8     **********************************
+results/W_Latency/perl_LRU_dl1_16_64_8.out:sim_IPC         1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_16_64_8_p_5_6.out:sim_IPC  1.2399  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_16_64_8.out:sim_IPC       1.2399  #  instructions  per  cycle
+*****************    dl1:16:64:4     **********************************
+results/W_Latency/perl_LRU_dl1_16_64_4.out:sim_IPC         1.1930  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_16_64_4_p_3_3.out:sim_IPC  1.1778  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_16_64_4.out:sim_IPC       1.1778  #  instructions  per  cycle
+*****************    dl1:16:32:16     **********************************
+results/W_Latency/perl_LRU_dl1_16_32_16.out:sim_IPC          1.2557  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_16_32_16_p_9_12.out:sim_IPC  1.1988  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_16_32_16.out:sim_IPC        1.2124  #  instructions  per  cycle
+*****************    dl1:16:32:8     **********************************
+results/W_Latency/perl_LRU_dl1_16_32_8.out:sim_IPC         1.2368  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_16_32_8_p_5_6.out:sim_IPC  1.1988  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_16_32_8.out:sim_IPC       1.2031  #  instructions  per  cycle
+*****************    dl1:16:32:4     **********************************
+results/W_Latency/perl_LRU_dl1_16_32_4.out:sim_IPC         1.1345  #  instructions  per  cycle
+results/W_Latency/perl_PLRU_dl1_16_32_4_p_3_3.out:sim_IPC  1.1293  #  instructions  per  cycle
+results/W_Latency/perl_SCORE_dl1_16_32_4.out:sim_IPC       1.1434  #  instructions  per  cycle
