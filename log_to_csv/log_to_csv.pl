@@ -111,12 +111,18 @@ sub generate_csv_lines() {
 
     foreach my $logfile (@logfiles) {
         my $logfile_fullpath = $logfiles_path . '/' . $logfile;
-        my $cache_name = &extract_cache_name($logfile);
-        my $missrate_grep_string = &gen_missrate_grep_string($cache_name);
-        my $miss;
-    }
+        my @cache_info = &extract_info_from_filename($logfile);
 
-    return 0;
+        my $benchmark = $cache_info[0];
+        my $replacement_type = $cache_info[1];
+        my $cache_config = $cache_info[2];
+        my $missrate_value = &get_missrate_value($logfile_fullpath, $logfile);
+        my $IPC_value = &get_IPC_value($logfile_fullpath);
+
+        my $csv_line = "$benchmark,$replacement_type,$cache_config,$IPC_value,$missrate_value";
+        push(@csv_lines, $csv_line);
+    }
+    return @csv_lines;
 }
 
 sub run_unit_tests() {
@@ -156,9 +162,9 @@ sub run_unit_tests() {
     my $IPC = &get_IPC_value($logfiles_path . '/' . $test_file, $test_file);
     &is($IPC, "1.1643", "get the IPC value");
 
-    #my @csv_lines = &generate_csv_lines($logfiles_path, @logfiles);
-    #my @expected_csv_lines = ("go,PLRU,dl2_1024_64_16_p_9_12,1.1643,0.0062");
-    #&is_deeply(\@csv_lines, \@expected_csv_lines, "Creating the actual csv lines");
+    my @csv_lines = &generate_csv_lines($logfiles_path, @logfiles);
+    my @expected_csv_lines = ("go,PLRU,dl2_1024_64_16_p_9_12,1.1643,0.0062");
+    &is_deeply(\@csv_lines, \@expected_csv_lines, "Creating the actual csv lines");
 
     &done_testing();
 }
