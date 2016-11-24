@@ -73,6 +73,14 @@ sub find_logfiles() {
     return @logfiles;
 }
 
+sub extract_info_from_filename() {
+    my $logfile_name = shift;
+    if( $logfile_name =~ /^(\w+?)_(\w+?)_(\w+)\./ ) {
+        return ($1, $2, $3);
+    }
+    return undef;
+}
+
 sub run_unit_tests() {
     use Test::More;
     my $test_file = "go_PLRU_dl2_1024_64_16_p_9_12.out";
@@ -94,6 +102,10 @@ sub run_unit_tests() {
     my @logfiles = &find_logfiles($logfiles_path);
     my @expected_logfiles = ("$test_file");
     &is_deeply(\@logfiles, \@expected_logfiles, "Finding all .out logfiles to convert to csv in directory");
+
+    my @filename_info = &extract_info_from_filename($test_file);
+    my @expected_filename_info = ("go", "PLRU", "dl2_1024_64_16_p_9_12");
+    &is_deeply(\@filename_info, \@expected_filename_info, "Extracting all test information from logfile name");
 
     &done_testing();
 }
