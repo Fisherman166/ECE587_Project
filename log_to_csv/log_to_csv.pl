@@ -6,6 +6,7 @@ use Getopt::Long;
 
 my $logfiles_path = undef;
 my $run_unittests = undef;
+my $output_filename = undef;
 my $help = undef;
 
 &parse_cmdline();
@@ -19,7 +20,9 @@ else {
 exit(0);
 
 sub main() {
-    return 0;
+    my @logfiles = &find_logfiles($logfiles_path);
+    my @csv_lines = &generate_csv_lines($logfiles_path, @logfiles);
+    &write_csv_lines($output_filename, @csv_lines);
 }
 
 ###############################################################################
@@ -27,16 +30,21 @@ sub main() {
 ###############################################################################
 sub parse_cmdline() {
     GetOptions(
+        "out|o=s"       => \$output_filename,
         "logs|l=s"      => \$logfiles_path,
         "unittest|u"    => \$run_unittests,
         "help|h"        => \$help,
     );
 
+    if(not defined $output_filename) {
+        $output_filename = "formatted_results.csv";
+    }
     if( (not defined $run_unittests) and (not defined $logfiles_path) ) {
         die "ERROR: No logfile path provided with the -logs or -l command\n";
     }
     if(defined $help) {
         print "-log or -l = Path to directiories containing the logfiles to convert into csv - REQUIRED\n";
+        print "-out or -o = Name for output csv file. Default filename is formatted_results.csv\n";
         print "-unittest or -u = Run the unittests\n";
         print "-help or -h = Print the help information\n";
         exit(0);
@@ -125,6 +133,16 @@ sub generate_csv_lines() {
     return @csv_lines;
 }
 
+sub write_csv_lines() {
+    my ($output_filename, @csv_lines) = @_;
+    open(my $filehandle, '>', $output_filename) or die "Could not open output file $output_filename\n";
+    
+    foreach my $csv_line (@csv_lines) {
+        print $filehandle "$csv_line\n";
+    }
+    close($filehandle);
+}
+
 sub run_unit_tests() {
     use Test::More;
     my $test_file = "go_PLRU_dl2_1024_64_16_p_9_12.out";
@@ -135,7 +153,7 @@ sub run_unit_tests() {
 
     my $cache_name = &extract_cache_name($test_file);
     &is($cache_name, "dl2", "Extracting the cachename of interest from filename");
-    my $cache_name = &extract_cache_name("bad_format.log");
+    $cache_name = &extract_cache_name("bad_format.log");
     &is($cache_name, undef, "Fails to extract cachename due to bad logfile format");
 
     my $missrate_grep_string = &gen_missrate_grep_string( &extract_cache_name($test_file) );
@@ -156,7 +174,7 @@ sub run_unit_tests() {
     my $IPC_value = &extract_stat_value("sim_IPC  1.1643  #  instructions  per  cycle");
     &is($IPC_value, "1.1643", "Extracting the IPC value from the IPC grep");
 
-    my $missrate = &get_missrate_value($logfiles_path . '/' . $test_file, $test_file);
+    $missrate = &get_missrate_value($logfiles_path . '/' . $test_file, $test_file);
     &is($missrate, "0.0062", "get the missrate value");
 
     my $IPC = &get_IPC_value($logfiles_path . '/' . $test_file, $test_file);
