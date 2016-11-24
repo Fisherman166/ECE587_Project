@@ -82,11 +82,34 @@ sub extract_info_from_filename() {
 }
 
 sub extract_stat_value() {
-    my $missrate_grep = shift;
-    if( $missrate_grep =~ /\S+\s+(\S+)/ ) {
+    my $stat_grep = shift;
+    if( $stat_grep =~ /\S+\s+(\S+)/ ) {
         return $1;
     }
     return undef;
+}
+
+sub get_missrate_value() {
+    my ($logfile_fullpath, $logfile) = @_;
+    my $cache_name = &extract_cache_name($logfile);
+    my $missrate_grep_string = &gen_missrate_grep_string($cache_name);
+    my $missrate_grep = &my_grep($missrate_grep_string, $logfile_fullpath);
+    my $missrate_value = &extract_stat_value($missrate_grep);
+    return $missrate_value;
+}
+
+sub generate_csv_lines() {
+    my ($logfiles_path, @logfiles) = @_;
+    my @csv_lines;
+
+    foreach my $logfile (@logfiles) {
+        my $logfile_fullpath = $logfiles_path . '/' . $logfile;
+        my $cache_name = &extract_cache_name($logfile);
+        my $missrate_grep_string = &gen_missrate_grep_string($cache_name);
+        my $miss;
+    }
+
+    return 0;
 }
 
 sub run_unit_tests() {
@@ -119,6 +142,13 @@ sub run_unit_tests() {
     &is($missrate, "0.0062", "Extracting the missrate value from the missrate grep");
     my $IPC_value = &extract_stat_value("sim_IPC  1.1643  #  instructions  per  cycle");
     &is($IPC_value, "1.1643", "Extracting the IPC value from the IPC grep");
+
+    my $missrate = &get_missrate_value($logfiles_path . '/' . $test_file, $test_file);
+    &is($missrate, "0.0062", "get the missrate value");
+
+    #my @csv_lines = &generate_csv_lines($logfiles_path, @logfiles);
+    #my @expected_csv_lines = ("go,PLRU,dl2_1024_64_16_p_9_12,1.1643,0.0062");
+    #&is_deeply(\@csv_lines, \@expected_csv_lines, "Creating the actual csv lines");
 
     &done_testing();
 }
