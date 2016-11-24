@@ -107,7 +107,7 @@ sub get_IPC_value() {
 
 sub generate_csv_lines() {
     my ($logfiles_path, @logfiles) = @_;
-    my @csv_lines;
+    my @csv_lines = ("Benchmark,Replacement Type,Cache config,IPC value,Missrate");
 
     foreach my $logfile (@logfiles) {
         my $logfile_fullpath = $logfiles_path . '/' . $logfile;
@@ -163,7 +163,8 @@ sub run_unit_tests() {
     &is($IPC, "1.1643", "get the IPC value");
 
     my @csv_lines = &generate_csv_lines($logfiles_path, @logfiles);
-    my @expected_csv_lines = ("go,PLRU,dl2_1024_64_16_p_9_12,1.1643,0.0062");
+    my @expected_csv_lines = ("Benchmark,Replacement Type,Cache config,IPC value,Missrate",
+                              "go,PLRU,dl2_1024_64_16_p_9_12,1.1643,0.0062");
     &is_deeply(\@csv_lines, \@expected_csv_lines, "Creating the actual csv lines");
 
     &done_testing();
