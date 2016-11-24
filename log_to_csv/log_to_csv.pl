@@ -98,6 +98,13 @@ sub get_missrate_value() {
     return $missrate_value;
 }
 
+sub get_IPC_value() {
+    my $logfile_fullpath = shift;
+    my $IPC_grep = &my_grep("IPC", $logfile_fullpath);
+    my $IPC_value = &extract_stat_value($IPC_grep);
+    return $IPC_value;
+}
+
 sub generate_csv_lines() {
     my ($logfiles_path, @logfiles) = @_;
     my @csv_lines;
@@ -145,6 +152,9 @@ sub run_unit_tests() {
 
     my $missrate = &get_missrate_value($logfiles_path . '/' . $test_file, $test_file);
     &is($missrate, "0.0062", "get the missrate value");
+
+    my $IPC = &get_IPC_value($logfiles_path . '/' . $test_file, $test_file);
+    &is($IPC, "1.1643", "get the IPC value");
 
     #my @csv_lines = &generate_csv_lines($logfiles_path, @logfiles);
     #my @expected_csv_lines = ("go,PLRU,dl2_1024_64_16_p_9_12,1.1643,0.0062");
