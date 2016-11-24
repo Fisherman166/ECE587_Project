@@ -81,6 +81,14 @@ sub extract_info_from_filename() {
     return undef;
 }
 
+sub extract_stat_value() {
+    my $missrate_grep = shift;
+    if( $missrate_grep =~ /\S+\s+(\S+)/ ) {
+        return $1;
+    }
+    return undef;
+}
+
 sub run_unit_tests() {
     use Test::More;
     my $test_file = "go_PLRU_dl2_1024_64_16_p_9_12.out";
@@ -106,6 +114,11 @@ sub run_unit_tests() {
     my @filename_info = &extract_info_from_filename($test_file);
     my @expected_filename_info = ("go", "PLRU", "dl2_1024_64_16_p_9_12");
     &is_deeply(\@filename_info, \@expected_filename_info, "Extracting all test information from logfile name");
+
+    my $missrate = &extract_stat_value("dl2.miss_rate  0.0062  #  miss  rate  (i.e.,  misses/ref)");
+    &is($missrate, "0.0062", "Extracting the missrate value from the missrate grep");
+    my $IPC_value = &extract_stat_value("sim_IPC  1.1643  #  instructions  per  cycle");
+    &is($IPC_value, "1.1643", "Extracting the IPC value from the IPC grep");
 
     &done_testing();
 }
