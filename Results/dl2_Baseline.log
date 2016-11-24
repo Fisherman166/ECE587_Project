@@ -1,0 +1,848 @@
+Benchmark Logs: 
+Mem Latency: 150
+Mem Latency: 10
+%%%%%%%%%%%%%   Benchmark:  go %%%%%%%%%%%%%%
+*****************    dl2:1024:64:32     **********************************
+results/Large_Assoc/go_LRU_dl2_1024_64_32.out:sim_IPC              1.1933  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_1024_64_32.out:dl2.misses           4750    #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_1024_64_32_p_17_24.out:sim_IPC     1.1643  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_1024_64_32_p_17_24.out:dl2.misses  7217    #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_1024_64_32.out:sim_IPC            1.1736  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_1024_64_32.out:dl2.misses         6394    #  total         number  of     misses
+*****************    dl2:1024:64:16     **********************************
+results/Large_Assoc/go_LRU_dl2_1024_64_16.out:sim_IPC             1.1933  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_1024_64_16.out:dl2.misses          4750    #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_1024_64_16_p_9_12.out:sim_IPC     1.1643  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_1024_64_16_p_9_12.out:dl2.misses  7217    #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_1024_64_16.out:sim_IPC           1.1778  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_1024_64_16.out:dl2.misses        6132    #  total         number  of     misses
+*****************    dl2:1024:64:8     **********************************
+results/Large_Assoc/go_LRU_dl2_1024_64_8.out:sim_IPC            1.1927  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_1024_64_8.out:dl2.misses         4794    #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_1024_64_8_p_5_6.out:sim_IPC     1.1637  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_1024_64_8_p_5_6.out:dl2.misses  7258    #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_1024_64_8.out:sim_IPC          1.1730  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_1024_64_8.out:dl2.misses       6486    #  total         number  of     misses
+*****************    dl2:1024:64:4     **********************************
+results/Large_Assoc/go_LRU_dl2_1024_64_4.out:sim_IPC            0.7547  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_1024_64_4.out:dl2.misses         56848   #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_1024_64_4_p_3_3.out:sim_IPC     0.7828  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_1024_64_4_p_3_3.out:dl2.misses  52278   #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_1024_64_4.out:sim_IPC          0.7795  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_1024_64_4.out:dl2.misses       53218   #  total         number  of     misses
+*****************    dl2:512:64:32     **********************************
+results/Large_Assoc/go_LRU_dl2_512_64_32.out:sim_IPC              1.1933  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_512_64_32.out:dl2.misses           4750    #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_512_64_32_p_17_24.out:sim_IPC     1.1418  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_512_64_32_p_17_24.out:dl2.misses  9084    #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_512_64_32.out:sim_IPC            1.1408  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_512_64_32.out:dl2.misses         9210    #  total         number  of     misses
+*****************    dl2:512:64:16     **********************************
+results/Large_Assoc/go_LRU_dl2_512_64_16.out:sim_IPC             1.1933  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_512_64_16.out:dl2.misses          4750    #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_512_64_16_p_9_12.out:sim_IPC     1.1418  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_512_64_16_p_9_12.out:dl2.misses  9084    #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_512_64_16.out:sim_IPC           1.1377  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_512_64_16.out:dl2.misses        9505    #  total         number  of     misses
+*****************    dl2:512:64:8     **********************************
+results/Large_Assoc/go_LRU_dl2_512_64_8.out:sim_IPC            1.0565  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_512_64_8.out:dl2.misses         16224   #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_512_64_8_p_5_6.out:sim_IPC     1.0400  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_512_64_8_p_5_6.out:dl2.misses  18387   #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_512_64_8.out:sim_IPC          1.0620  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_512_64_8.out:dl2.misses       16288   #  total         number  of     misses
+*****************    dl2:512:64:4     **********************************
+results/Large_Assoc/go_LRU_dl2_512_64_4.out:sim_IPC            0.4357  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_512_64_4.out:dl2.misses         172731  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_512_64_4_p_3_3.out:sim_IPC     0.4553  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_512_64_4_p_3_3.out:dl2.misses  164235  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_512_64_4.out:sim_IPC          0.4487  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_512_64_4.out:dl2.misses       169961  #  total         number  of     misses
+*****************    dl2:256:64:32     **********************************
+results/Large_Assoc/go_LRU_dl2_256_64_32.out:sim_IPC              1.1933  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_256_64_32.out:dl2.misses           4750    #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_256_64_32_p_17_24.out:sim_IPC     1.0897  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_256_64_32_p_17_24.out:dl2.misses  14042   #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_256_64_32.out:sim_IPC            1.0597  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_256_64_32.out:dl2.misses         16831   #  total         number  of     misses
+*****************    dl2:256:64:16     **********************************
+results/Large_Assoc/go_LRU_dl2_256_64_16.out:sim_IPC             1.1393  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_256_64_16.out:dl2.misses          8866    #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_256_64_16_p_9_12.out:sim_IPC     1.0515  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_256_64_16_p_9_12.out:dl2.misses  17593   #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_256_64_16.out:sim_IPC           1.0406  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_256_64_16.out:dl2.misses        18731   #  total         number  of     misses
+*****************    dl2:256:64:8     **********************************
+results/Large_Assoc/go_LRU_dl2_256_64_8.out:sim_IPC            0.4263  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_256_64_8.out:dl2.misses         172270  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_256_64_8_p_5_6.out:sim_IPC     0.4695  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_256_64_8_p_5_6.out:dl2.misses  153939  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_256_64_8.out:sim_IPC          0.4680  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_256_64_8.out:dl2.misses       155641  #  total         number  of     misses
+*****************    dl2:256:64:4     **********************************
+results/Large_Assoc/go_LRU_dl2_256_64_4.out:sim_IPC            0.3119  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_256_64_4.out:dl2.misses         305714  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_256_64_4_p_3_3.out:sim_IPC     0.2923  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_256_64_4_p_3_3.out:dl2.misses  336609  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_256_64_4.out:sim_IPC          0.2875  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_256_64_4.out:dl2.misses       348315  #  total         number  of     misses
+*****************    dl2:128:64:32     **********************************
+results/Large_Assoc/go_LRU_dl2_128_64_32.out:sim_IPC              1.1585  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_128_64_32.out:dl2.misses           7368    #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_128_64_32_p_17_24.out:sim_IPC     0.9894  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_128_64_32_p_17_24.out:dl2.misses  25434   #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_128_64_32.out:sim_IPC            0.7236  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_128_64_32.out:dl2.misses         66101   #  total         number  of     misses
+*****************    dl2:128:64:16     **********************************
+results/Large_Assoc/go_LRU_dl2_128_64_16.out:sim_IPC             0.4120  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_128_64_16.out:dl2.misses          179960  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_128_64_16_p_9_12.out:sim_IPC     0.4729  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_128_64_16_p_9_12.out:dl2.misses  153116  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_128_64_16.out:sim_IPC           0.4941  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_128_64_16.out:dl2.misses        139542  #  total         number  of     misses
+*****************    dl2:128:64:8     **********************************
+results/Large_Assoc/go_LRU_dl2_128_64_8.out:sim_IPC            0.3157  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_128_64_8.out:dl2.misses         300178  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_128_64_8_p_5_6.out:sim_IPC     0.2841  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_128_64_8_p_5_6.out:dl2.misses  341840  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_128_64_8.out:sim_IPC          0.2710  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_128_64_8.out:dl2.misses       366967  #  total         number  of     misses
+*****************    dl2:128:64:4     **********************************
+results/Large_Assoc/go_LRU_dl2_128_64_4.out:sim_IPC            0.2408  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_128_64_4.out:dl2.misses         460576  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_128_64_4_p_3_3.out:sim_IPC     0.2161  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_128_64_4_p_3_3.out:dl2.misses  499493  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_128_64_4.out:sim_IPC          0.2152  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_128_64_4.out:dl2.misses       502689  #  total         number  of     misses
+*****************    dl2:64:64:32     **********************************
+results/Large_Assoc/go_LRU_dl2_64_64_32.out:sim_IPC              0.3959  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_64_64_32.out:dl2.misses           189501  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_64_64_32_p_17_24.out:sim_IPC     0.4786  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_64_64_32_p_17_24.out:dl2.misses  152632  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_64_64_32.out:sim_IPC            0.3869  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_64_64_32.out:dl2.misses         212827  #  total         number  of     misses
+*****************    dl2:64:64:16     **********************************
+results/Large_Assoc/go_LRU_dl2_64_64_16.out:sim_IPC             0.3187  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_64_64_16.out:dl2.misses          293156  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_64_64_16_p_9_12.out:sim_IPC     0.2754  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_64_64_16_p_9_12.out:dl2.misses  344816  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_64_64_16.out:sim_IPC           0.2731  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_64_64_16.out:dl2.misses        350821  #  total         number  of     misses
+*****************    dl2:64:64:8     **********************************
+results/Large_Assoc/go_LRU_dl2_64_64_8.out:sim_IPC            0.2509  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_64_64_8.out:dl2.misses         440751  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_64_64_8_p_5_6.out:sim_IPC     0.2071  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_64_64_8_p_5_6.out:dl2.misses  499941  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_64_64_8.out:sim_IPC          0.2035  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_64_64_8.out:dl2.misses       512384  #  total         number  of     misses
+*****************    dl2:64:64:4     **********************************
+results/Large_Assoc/go_LRU_dl2_64_64_4.out:sim_IPC            0.2010  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_64_64_4.out:dl2.misses         585400  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_64_64_4_p_3_3.out:sim_IPC     0.1732  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_64_64_4_p_3_3.out:dl2.misses  608857  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_64_64_4.out:sim_IPC          0.1754  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_64_64_4.out:dl2.misses       601890  #  total         number  of     misses
+*****************    dl2:32:64:32     **********************************
+results/Large_Assoc/go_LRU_dl2_32_64_32.out:sim_IPC              0.3216  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_32_64_32.out:dl2.misses           289225  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_32_64_32_p_17_24.out:sim_IPC     0.2736  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_32_64_32_p_17_24.out:dl2.misses  346810  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_32_64_32.out:sim_IPC            0.2361  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_32_64_32.out:dl2.misses         428791  #  total         number  of     misses
+*****************    dl2:32:64:16     **********************************
+results/Large_Assoc/go_LRU_dl2_32_64_16.out:sim_IPC             0.2602  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_32_64_16.out:dl2.misses          422549  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_32_64_16_p_9_12.out:sim_IPC     0.2090  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_32_64_16_p_9_12.out:dl2.misses  491363  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_32_64_16.out:sim_IPC           0.2057  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_32_64_16.out:dl2.misses        508076  #  total         number  of     misses
+*****************    dl2:32:64:8     **********************************
+results/Large_Assoc/go_LRU_dl2_32_64_8.out:sim_IPC            0.2073  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_32_64_8.out:dl2.misses         563273  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_32_64_8_p_5_6.out:sim_IPC     0.1754  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_32_64_8_p_5_6.out:dl2.misses  600895  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_32_64_8.out:sim_IPC          0.1760  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_32_64_8.out:dl2.misses       600214  #  total         number  of     misses
+*****************    dl2:32:64:4     **********************************
+results/Large_Assoc/go_LRU_dl2_32_64_4.out:sim_IPC            0.1737  #  instructions  per     cycle
+results/Large_Assoc/go_LRU_dl2_32_64_4.out:dl2.misses         681700  #  total         number  of     misses
+results/Large_Assoc/go_PLRU_dl2_32_64_4_p_3_3.out:sim_IPC     0.1522  #  instructions  per     cycle
+results/Large_Assoc/go_PLRU_dl2_32_64_4_p_3_3.out:dl2.misses  694432  #  total         number  of     misses
+results/Large_Assoc/go_SCORE_dl2_32_64_4.out:sim_IPC          0.1531  #  instructions  per     cycle
+results/Large_Assoc/go_SCORE_dl2_32_64_4.out:dl2.misses       690713  #  total         number  of     misses
+%%%%%%%%%%%%%   Benchmark:  gcc %%%%%%%%%%%%%%
+*****************    dl2:1024:64:32     **********************************
+results/Large_Assoc/gcc_LRU_dl2_1024_64_32.out:sim_IPC              0.7766  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_1024_64_32.out:dl2.misses           15874   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_1024_64_32_p_17_24.out:sim_IPC     0.7592  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_1024_64_32_p_17_24.out:dl2.misses  19227   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_1024_64_32.out:sim_IPC            0.7390  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_1024_64_32.out:dl2.misses         23246   #  total         number  of     misses
+*****************    dl2:1024:64:16     **********************************
+results/Large_Assoc/gcc_LRU_dl2_1024_64_16.out:sim_IPC             0.7698  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_1024_64_16.out:dl2.misses          17053   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_1024_64_16_p_9_12.out:sim_IPC     0.7548  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_1024_64_16_p_9_12.out:dl2.misses  20006   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_1024_64_16.out:sim_IPC           0.7323  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_1024_64_16.out:dl2.misses        24588   #  total         number  of     misses
+*****************    dl2:1024:64:8     **********************************
+results/Large_Assoc/gcc_LRU_dl2_1024_64_8.out:sim_IPC            0.7458  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_1024_64_8.out:dl2.misses         21625   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_1024_64_8_p_5_6.out:sim_IPC     0.7268  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_1024_64_8_p_5_6.out:dl2.misses  25573   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_1024_64_8.out:sim_IPC          0.7268  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_1024_64_8.out:dl2.misses       25732   #  total         number  of     misses
+*****************    dl2:1024:64:4     **********************************
+results/Large_Assoc/gcc_LRU_dl2_1024_64_4.out:sim_IPC            0.6910  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_1024_64_4.out:dl2.misses         33397   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_1024_64_4_p_3_3.out:sim_IPC     0.6820  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_1024_64_4_p_3_3.out:dl2.misses  35819   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_1024_64_4.out:sim_IPC          0.6818  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_1024_64_4.out:dl2.misses       35956   #  total         number  of     misses
+*****************    dl2:512:64:32     **********************************
+results/Large_Assoc/gcc_LRU_dl2_512_64_32.out:sim_IPC              0.7718  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_512_64_32.out:dl2.misses           16687   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_512_64_32_p_17_24.out:sim_IPC     0.7449  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_512_64_32_p_17_24.out:dl2.misses  22085   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_512_64_32.out:sim_IPC            0.7129  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_512_64_32.out:dl2.misses         29024   #  total         number  of     misses
+*****************    dl2:512:64:16     **********************************
+results/Large_Assoc/gcc_LRU_dl2_512_64_16.out:sim_IPC             0.7464  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_512_64_16.out:dl2.misses          21488   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_512_64_16_p_9_12.out:sim_IPC     0.7102  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_512_64_16_p_9_12.out:dl2.misses  29144   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_512_64_16.out:sim_IPC           0.7105  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_512_64_16.out:dl2.misses        29619   #  total         number  of     misses
+*****************    dl2:512:64:8     **********************************
+results/Large_Assoc/gcc_LRU_dl2_512_64_8.out:sim_IPC            0.7116  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_512_64_8.out:dl2.misses         28793   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_512_64_8_p_5_6.out:sim_IPC     0.6864  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_512_64_8_p_5_6.out:dl2.misses  34839   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_512_64_8.out:sim_IPC          0.6882  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_512_64_8.out:dl2.misses       34632   #  total         number  of     misses
+*****************    dl2:512:64:4     **********************************
+results/Large_Assoc/gcc_LRU_dl2_512_64_4.out:sim_IPC            0.5345  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_512_64_4.out:dl2.misses         80395   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_512_64_4_p_3_3.out:sim_IPC     0.5302  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_512_64_4_p_3_3.out:dl2.misses  83001   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_512_64_4.out:sim_IPC          0.5336  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_512_64_4.out:dl2.misses       81991   #  total         number  of     misses
+*****************    dl2:256:64:32     **********************************
+results/Large_Assoc/gcc_LRU_dl2_256_64_32.out:sim_IPC              0.7467  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_256_64_32.out:dl2.misses           21425   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_256_64_32_p_17_24.out:sim_IPC     0.6793  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_256_64_32_p_17_24.out:dl2.misses  36163   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_256_64_32.out:sim_IPC            0.6793  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_256_64_32.out:dl2.misses         37146   #  total         number  of     misses
+*****************    dl2:256:64:16     **********************************
+results/Large_Assoc/gcc_LRU_dl2_256_64_16.out:sim_IPC             0.7238  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_256_64_16.out:dl2.misses          26337   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_256_64_16_p_9_12.out:sim_IPC     0.6659  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_256_64_16_p_9_12.out:dl2.misses  39856   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_256_64_16.out:sim_IPC           0.6699  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_256_64_16.out:dl2.misses        39545   #  total         number  of     misses
+*****************    dl2:256:64:8     **********************************
+results/Large_Assoc/gcc_LRU_dl2_256_64_8.out:sim_IPC            0.5819  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_256_64_8.out:dl2.misses         63880   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_256_64_8_p_5_6.out:sim_IPC     0.5616  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_256_64_8_p_5_6.out:dl2.misses  71905   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_256_64_8.out:sim_IPC          0.5675  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_256_64_8.out:dl2.misses       70428   #  total         number  of     misses
+*****************    dl2:256:64:4     **********************************
+results/Large_Assoc/gcc_LRU_dl2_256_64_4.out:sim_IPC            0.2914  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_256_64_4.out:dl2.misses         249053  #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_256_64_4_p_3_3.out:sim_IPC     0.2932  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_256_64_4_p_3_3.out:dl2.misses  248272  #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_256_64_4.out:sim_IPC          0.3020  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_256_64_4.out:dl2.misses       238120  #  total         number  of     misses
+*****************    dl2:128:64:32     **********************************
+results/Large_Assoc/gcc_LRU_dl2_128_64_32.out:sim_IPC              0.7308  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_128_64_32.out:dl2.misses           24944   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_128_64_32_p_17_24.out:sim_IPC     0.6429  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_128_64_32_p_17_24.out:dl2.misses  46162   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_128_64_32.out:sim_IPC            0.5806  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_128_64_32.out:dl2.misses         65458   #  total         number  of     misses
+*****************    dl2:128:64:16     **********************************
+results/Large_Assoc/gcc_LRU_dl2_128_64_16.out:sim_IPC             0.5941  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_128_64_16.out:dl2.misses          59688   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_128_64_16_p_9_12.out:sim_IPC     0.5611  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_128_64_16_p_9_12.out:dl2.misses  72126   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_128_64_16.out:sim_IPC           0.5497  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_128_64_16.out:dl2.misses        76655   #  total         number  of     misses
+*****************    dl2:128:64:8     **********************************
+results/Large_Assoc/gcc_LRU_dl2_128_64_8.out:sim_IPC            0.3404  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_128_64_8.out:dl2.misses         198584  #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_128_64_8_p_5_6.out:sim_IPC     0.3462  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_128_64_8_p_5_6.out:dl2.misses  194358  #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_128_64_8.out:sim_IPC          0.3494  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_128_64_8.out:dl2.misses       191798  #  total         number  of     misses
+*****************    dl2:128:64:4     **********************************
+results/Large_Assoc/gcc_LRU_dl2_128_64_4.out:sim_IPC            0.1295  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_128_64_4.out:dl2.misses         692387  #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_128_64_4_p_3_3.out:sim_IPC     0.1360  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_128_64_4_p_3_3.out:dl2.misses  654719  #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_128_64_4.out:sim_IPC          0.1384  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_128_64_4.out:dl2.misses       642382  #  total         number  of     misses
+*****************    dl2:64:64:32     **********************************
+results/Large_Assoc/gcc_LRU_dl2_64_64_32.out:sim_IPC              0.5972  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_64_64_32.out:dl2.misses           58722   #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_64_64_32_p_17_24.out:sim_IPC     0.5399  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_64_64_32_p_17_24.out:dl2.misses  79587   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_64_64_32.out:sim_IPC            0.4194  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_64_64_32.out:dl2.misses         137455  #  total         number  of     misses
+*****************    dl2:64:64:16     **********************************
+results/Large_Assoc/gcc_LRU_dl2_64_64_16.out:sim_IPC             0.3641  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_64_64_16.out:dl2.misses          178467  #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_64_64_16_p_9_12.out:sim_IPC     0.3547  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_64_64_16_p_9_12.out:dl2.misses  183887  #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_64_64_16.out:sim_IPC           0.3557  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_64_64_16.out:dl2.misses        182989  #  total         number  of     misses
+*****************    dl2:64:64:8     **********************************
+results/Large_Assoc/gcc_LRU_dl2_64_64_8.out:sim_IPC            0.1572  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_64_64_8.out:dl2.misses         555553  #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_64_64_8_p_5_6.out:sim_IPC     0.1734  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_64_64_8_p_5_6.out:dl2.misses  486972  #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_64_64_8.out:sim_IPC          0.1678  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_64_64_8.out:dl2.misses       506515  #  total         number  of     misses
+*****************    dl2:64:64:4     **********************************
+results/Large_Assoc/gcc_LRU_dl2_64_64_4.out:sim_IPC            0.0896   #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_64_64_4.out:dl2.misses         1052282  #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_64_64_4_p_3_3.out:sim_IPC     0.0934   #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_64_64_4_p_3_3.out:dl2.misses  993060   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_64_64_4.out:sim_IPC          0.0920   #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_64_64_4.out:dl2.misses       1008621  #  total         number  of     misses
+*****************    dl2:32:64:32     **********************************
+results/Large_Assoc/gcc_LRU_dl2_32_64_32.out:sim_IPC              0.3849  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_32_64_32.out:dl2.misses           163617  #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_32_64_32_p_17_24.out:sim_IPC     0.3539  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_32_64_32_p_17_24.out:dl2.misses  185205  #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_32_64_32.out:sim_IPC            0.2795  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_32_64_32.out:dl2.misses         264077  #  total         number  of     misses
+*****************    dl2:32:64:16     **********************************
+results/Large_Assoc/gcc_LRU_dl2_32_64_16.out:sim_IPC             0.1692  #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_32_64_16.out:dl2.misses          510193  #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_32_64_16_p_9_12.out:sim_IPC     0.1833  #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_32_64_16_p_9_12.out:dl2.misses  455167  #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_32_64_16.out:sim_IPC           0.1860  #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_32_64_16.out:dl2.misses        448368  #  total         number  of     misses
+*****************    dl2:32:64:8     **********************************
+results/Large_Assoc/gcc_LRU_dl2_32_64_8.out:sim_IPC            0.0912   #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_32_64_8.out:dl2.misses         1030433  #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_32_64_8_p_5_6.out:sim_IPC     0.1049   #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_32_64_8_p_5_6.out:dl2.misses  871267   #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_32_64_8.out:sim_IPC          0.0982   #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_32_64_8.out:dl2.misses       938898   #  total         number  of     misses
+*****************    dl2:32:64:4     **********************************
+results/Large_Assoc/gcc_LRU_dl2_32_64_4.out:sim_IPC            0.0759   #  instructions  per     cycle
+results/Large_Assoc/gcc_LRU_dl2_32_64_4.out:dl2.misses         1261199  #  total         number  of     misses
+results/Large_Assoc/gcc_PLRU_dl2_32_64_4_p_3_3.out:sim_IPC     0.0752   #  instructions  per     cycle
+results/Large_Assoc/gcc_PLRU_dl2_32_64_4_p_3_3.out:dl2.misses  1253541  #  total         number  of     misses
+results/Large_Assoc/gcc_SCORE_dl2_32_64_4.out:sim_IPC          0.0748   #  instructions  per     cycle
+results/Large_Assoc/gcc_SCORE_dl2_32_64_4.out:dl2.misses       1261902  #  total         number  of     misses
+%%%%%%%%%%%%%   Benchmark:  li %%%%%%%%%%%%%%
+*****************    dl2:1024:64:32     **********************************
+results/Large_Assoc/li_LRU_dl2_1024_64_32.out:sim_IPC              1.5076  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_1024_64_32.out:dl2.misses           2191    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_1024_64_32_p_17_24.out:sim_IPC     1.4982  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_1024_64_32_p_17_24.out:dl2.misses  2702    #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_1024_64_32.out:sim_IPC            1.5012  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_1024_64_32.out:dl2.misses         2553    #  total         number  of     misses
+*****************    dl2:1024:64:16     **********************************
+results/Large_Assoc/li_LRU_dl2_1024_64_16.out:sim_IPC             1.5076  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_1024_64_16.out:dl2.misses          2191    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_1024_64_16_p_9_12.out:sim_IPC     1.4982  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_1024_64_16_p_9_12.out:dl2.misses  2702    #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_1024_64_16.out:sim_IPC           1.4990  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_1024_64_16.out:dl2.misses        2671    #  total         number  of     misses
+*****************    dl2:1024:64:8     **********************************
+results/Large_Assoc/li_LRU_dl2_1024_64_8.out:sim_IPC            1.5076  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_1024_64_8.out:dl2.misses         2191    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_1024_64_8_p_5_6.out:sim_IPC     1.4982  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_1024_64_8_p_5_6.out:dl2.misses  2702    #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_1024_64_8.out:sim_IPC          1.4985  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_1024_64_8.out:dl2.misses       2689    #  total         number  of     misses
+*****************    dl2:1024:64:4     **********************************
+results/Large_Assoc/li_LRU_dl2_1024_64_4.out:sim_IPC            1.5076  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_1024_64_4.out:dl2.misses         2191    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_1024_64_4_p_3_3.out:sim_IPC     1.4982  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_1024_64_4_p_3_3.out:dl2.misses  2702    #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_1024_64_4.out:sim_IPC          1.5000  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_1024_64_4.out:dl2.misses       2617    #  total         number  of     misses
+*****************    dl2:512:64:32     **********************************
+results/Large_Assoc/li_LRU_dl2_512_64_32.out:sim_IPC              1.5076  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_512_64_32.out:dl2.misses           2191    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_512_64_32_p_17_24.out:sim_IPC     1.1011  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_512_64_32_p_17_24.out:dl2.misses  29917   #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_512_64_32.out:sim_IPC            1.4790  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_512_64_32.out:dl2.misses         3704    #  total         number  of     misses
+*****************    dl2:512:64:16     **********************************
+results/Large_Assoc/li_LRU_dl2_512_64_16.out:sim_IPC             1.5076  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_512_64_16.out:dl2.misses          2191    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_512_64_16_p_9_12.out:sim_IPC     1.1011  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_512_64_16_p_9_12.out:dl2.misses  29917   #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_512_64_16.out:sim_IPC           1.4753  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_512_64_16.out:dl2.misses        3862    #  total         number  of     misses
+*****************    dl2:512:64:8     **********************************
+results/Large_Assoc/li_LRU_dl2_512_64_8.out:sim_IPC            1.5076  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_512_64_8.out:dl2.misses         2191    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_512_64_8_p_5_6.out:sim_IPC     1.1011  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_512_64_8_p_5_6.out:dl2.misses  29917   #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_512_64_8.out:sim_IPC          1.4899  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_512_64_8.out:dl2.misses       3209    #  total         number  of     misses
+*****************    dl2:512:64:4     **********************************
+results/Large_Assoc/li_LRU_dl2_512_64_4.out:sim_IPC            1.4173  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_512_64_4.out:dl2.misses         6738    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_512_64_4_p_3_3.out:sim_IPC     0.9461  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_512_64_4_p_3_3.out:dl2.misses  46448   #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_512_64_4.out:sim_IPC          1.2606  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_512_64_4.out:dl2.misses       16100   #  total         number  of     misses
+*****************    dl2:256:64:32     **********************************
+results/Large_Assoc/li_LRU_dl2_256_64_32.out:sim_IPC              1.5076  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_256_64_32.out:dl2.misses           2191    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_256_64_32_p_17_24.out:sim_IPC     1.0937  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_256_64_32_p_17_24.out:dl2.misses  30758   #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_256_64_32.out:sim_IPC            1.4673  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_256_64_32.out:dl2.misses         4507    #  total         number  of     misses
+*****************    dl2:256:64:16     **********************************
+results/Large_Assoc/li_LRU_dl2_256_64_16.out:sim_IPC             1.5076  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_256_64_16.out:dl2.misses          2191    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_256_64_16_p_9_12.out:sim_IPC     1.0937  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_256_64_16_p_9_12.out:dl2.misses  30758   #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_256_64_16.out:sim_IPC           1.4658  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_256_64_16.out:dl2.misses        4584    #  total         number  of     misses
+*****************    dl2:256:64:8     **********************************
+results/Large_Assoc/li_LRU_dl2_256_64_8.out:sim_IPC            1.4208  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_256_64_8.out:dl2.misses         6413    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_256_64_8_p_5_6.out:sim_IPC     0.9206  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_256_64_8_p_5_6.out:dl2.misses  51294   #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_256_64_8.out:sim_IPC          1.3050  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_256_64_8.out:dl2.misses       13798   #  total         number  of     misses
+*****************    dl2:256:64:4     **********************************
+results/Large_Assoc/li_LRU_dl2_256_64_4.out:sim_IPC            0.7643  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_256_64_4.out:dl2.misses         69823   #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_256_64_4_p_3_3.out:sim_IPC     0.5663  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_256_64_4_p_3_3.out:dl2.misses  130208  #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_256_64_4.out:sim_IPC          0.6737  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_256_64_4.out:dl2.misses       95108   #  total         number  of     misses
+*****************    dl2:128:64:32     **********************************
+results/Large_Assoc/li_LRU_dl2_128_64_32.out:sim_IPC              1.5076  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_128_64_32.out:dl2.misses           2191    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_128_64_32_p_17_24.out:sim_IPC     1.0718  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_128_64_32_p_17_24.out:dl2.misses  32548   #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_128_64_32.out:sim_IPC            1.3885  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_128_64_32.out:dl2.misses         8647    #  total         number  of     misses
+*****************    dl2:128:64:16     **********************************
+results/Large_Assoc/li_LRU_dl2_128_64_16.out:sim_IPC             1.4265  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_128_64_16.out:dl2.misses          6087    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_128_64_16_p_9_12.out:sim_IPC     0.9097  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_128_64_16_p_9_12.out:dl2.misses  52712   #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_128_64_16.out:sim_IPC           1.3293  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_128_64_16.out:dl2.misses        12161   #  total         number  of     misses
+*****************    dl2:128:64:8     **********************************
+results/Large_Assoc/li_LRU_dl2_128_64_8.out:sim_IPC            0.7640  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_128_64_8.out:dl2.misses         67417   #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_128_64_8_p_5_6.out:sim_IPC     0.5673  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_128_64_8_p_5_6.out:dl2.misses  131925  #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_128_64_8.out:sim_IPC          0.6409  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_128_64_8.out:dl2.misses       105009  #  total         number  of     misses
+*****************    dl2:128:64:4     **********************************
+results/Large_Assoc/li_LRU_dl2_128_64_4.out:sim_IPC            0.5918  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_128_64_4.out:dl2.misses         142213  #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_128_64_4_p_3_3.out:sim_IPC     0.4073  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_128_64_4_p_3_3.out:dl2.misses  215091  #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_128_64_4.out:sim_IPC          0.4683  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_128_64_4.out:dl2.misses       173731  #  total         number  of     misses
+*****************    dl2:64:64:32     **********************************
+results/Large_Assoc/li_LRU_dl2_64_64_32.out:sim_IPC              1.4640  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_64_64_32.out:dl2.misses           4280    #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_64_64_32_p_17_24.out:sim_IPC     1.0159  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_64_64_32_p_17_24.out:dl2.misses  37295   #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_64_64_32.out:sim_IPC            0.9114  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_64_64_32.out:dl2.misses         50191   #  total         number  of     misses
+*****************    dl2:64:64:16     **********************************
+results/Large_Assoc/li_LRU_dl2_64_64_16.out:sim_IPC             0.7678  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_64_64_16.out:dl2.misses          65917   #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_64_64_16_p_9_12.out:sim_IPC     0.5153  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_64_64_16_p_9_12.out:dl2.misses  143462  #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_64_64_16.out:sim_IPC           0.6085  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_64_64_16.out:dl2.misses        109630  #  total         number  of     misses
+*****************    dl2:64:64:8     **********************************
+results/Large_Assoc/li_LRU_dl2_64_64_8.out:sim_IPC            0.5980  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_64_64_8.out:dl2.misses         130471  #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_64_64_8_p_5_6.out:sim_IPC     0.3262  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_64_64_8_p_5_6.out:dl2.misses  251185  #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_64_64_8.out:sim_IPC          0.3799  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_64_64_8.out:dl2.misses       204902  #  total         number  of     misses
+*****************    dl2:64:64:4     **********************************
+results/Large_Assoc/li_LRU_dl2_64_64_4.out:sim_IPC            0.5245  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_64_64_4.out:dl2.misses         230265  #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_64_64_4_p_3_3.out:sim_IPC     0.2620  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_64_64_4_p_3_3.out:dl2.misses  321121  #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_64_64_4.out:sim_IPC          0.2920  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_64_64_4.out:dl2.misses       275387  #  total         number  of     misses
+*****************    dl2:32:64:32     **********************************
+results/Large_Assoc/li_LRU_dl2_32_64_32.out:sim_IPC              0.7669  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_32_64_32.out:dl2.misses           66118   #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_32_64_32_p_17_24.out:sim_IPC     0.6036  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_32_64_32_p_17_24.out:dl2.misses  112368  #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_32_64_32.out:sim_IPC            0.5112  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_32_64_32.out:dl2.misses         143333  #  total         number  of     misses
+*****************    dl2:32:64:16     **********************************
+results/Large_Assoc/li_LRU_dl2_32_64_16.out:sim_IPC             0.6046  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_32_64_16.out:dl2.misses          132584  #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_32_64_16_p_9_12.out:sim_IPC     0.3304  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_32_64_16_p_9_12.out:dl2.misses  248733  #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_32_64_16.out:sim_IPC           0.3932  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_32_64_16.out:dl2.misses        199179  #  total         number  of     misses
+*****************    dl2:32:64:8     **********************************
+results/Large_Assoc/li_LRU_dl2_32_64_8.out:sim_IPC            0.5373  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_32_64_8.out:dl2.misses         222790  #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_32_64_8_p_5_6.out:sim_IPC     0.2664  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_32_64_8_p_5_6.out:dl2.misses  311819  #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_32_64_8.out:sim_IPC          0.3022  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_32_64_8.out:dl2.misses       266743  #  total         number  of     misses
+*****************    dl2:32:64:4     **********************************
+results/Large_Assoc/li_LRU_dl2_32_64_4.out:sim_IPC            0.5002  #  instructions  per     cycle
+results/Large_Assoc/li_LRU_dl2_32_64_4.out:dl2.misses         253805  #  total         number  of     misses
+results/Large_Assoc/li_PLRU_dl2_32_64_4_p_3_3.out:sim_IPC     0.2385  #  instructions  per     cycle
+results/Large_Assoc/li_PLRU_dl2_32_64_4_p_3_3.out:dl2.misses  354106  #  total         number  of     misses
+results/Large_Assoc/li_SCORE_dl2_32_64_4.out:sim_IPC          0.2605  #  instructions  per     cycle
+results/Large_Assoc/li_SCORE_dl2_32_64_4.out:dl2.misses       313613  #  total         number  of     misses
+%%%%%%%%%%%%%   Benchmark:  ijpeg %%%%%%%%%%%%%%
+*****************    dl2:1024:64:32     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_1024_64_32.out:sim_IPC              1.8464  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_1024_64_32.out:dl2.misses           5696    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_1024_64_32_p_17_24.out:sim_IPC     1.8450  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_1024_64_32_p_17_24.out:dl2.misses  5745    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_1024_64_32.out:sim_IPC            1.8453  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_1024_64_32.out:dl2.misses         5736    #  total         number  of     misses
+*****************    dl2:1024:64:16     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_1024_64_16.out:sim_IPC             1.8464  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_1024_64_16.out:dl2.misses          5696    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_1024_64_16_p_9_12.out:sim_IPC     1.8450  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_1024_64_16_p_9_12.out:dl2.misses  5745    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_1024_64_16.out:sim_IPC           1.8450  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_1024_64_16.out:dl2.misses        5746    #  total         number  of     misses
+*****************    dl2:1024:64:8     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_1024_64_8.out:sim_IPC            1.8464  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_1024_64_8.out:dl2.misses         5696    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_1024_64_8_p_5_6.out:sim_IPC     1.8450  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_1024_64_8_p_5_6.out:dl2.misses  5745    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_1024_64_8.out:sim_IPC          1.8449  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_1024_64_8.out:dl2.misses       5748    #  total         number  of     misses
+*****************    dl2:1024:64:4     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_1024_64_4.out:sim_IPC            1.8463  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_1024_64_4.out:dl2.misses         5697    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_1024_64_4_p_3_3.out:sim_IPC     1.8450  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_1024_64_4_p_3_3.out:dl2.misses  5746    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_1024_64_4.out:sim_IPC          1.8449  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_1024_64_4.out:dl2.misses       5747    #  total         number  of     misses
+*****************    dl2:512:64:32     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_512_64_32.out:sim_IPC              1.8464  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_512_64_32.out:dl2.misses           5696    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_512_64_32_p_17_24.out:sim_IPC     1.8425  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_512_64_32_p_17_24.out:dl2.misses  5829    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_512_64_32.out:sim_IPC            1.8421  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_512_64_32.out:dl2.misses         5842    #  total         number  of     misses
+*****************    dl2:512:64:16     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_512_64_16.out:sim_IPC             1.8464  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_512_64_16.out:dl2.misses          5696    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_512_64_16_p_9_12.out:sim_IPC     1.8425  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_512_64_16_p_9_12.out:dl2.misses  5829    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_512_64_16.out:sim_IPC           1.8420  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_512_64_16.out:dl2.misses        5842    #  total         number  of     misses
+*****************    dl2:512:64:8     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_512_64_8.out:sim_IPC            1.8463  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_512_64_8.out:dl2.misses         5697    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_512_64_8_p_5_6.out:sim_IPC     1.8425  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_512_64_8_p_5_6.out:dl2.misses  5830    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_512_64_8.out:sim_IPC          1.8423  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_512_64_8.out:dl2.misses       5838    #  total         number  of     misses
+*****************    dl2:512:64:4     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_512_64_4.out:sim_IPC            1.8328  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_512_64_4.out:dl2.misses         6261    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_512_64_4_p_3_3.out:sim_IPC     1.8298  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_512_64_4_p_3_3.out:dl2.misses  6371    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_512_64_4.out:sim_IPC          1.8309  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_512_64_4.out:dl2.misses       6321    #  total         number  of     misses
+*****************    dl2:256:64:32     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_256_64_32.out:sim_IPC              1.8464  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_256_64_32.out:dl2.misses           5696    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_256_64_32_p_17_24.out:sim_IPC     1.8370  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_256_64_32_p_17_24.out:dl2.misses  6170    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_256_64_32.out:sim_IPC            1.8377  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_256_64_32.out:dl2.misses         6124    #  total         number  of     misses
+*****************    dl2:256:64:16     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_256_64_16.out:sim_IPC             1.8463  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_256_64_16.out:dl2.misses          5697    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_256_64_16_p_9_12.out:sim_IPC     1.8370  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_256_64_16_p_9_12.out:dl2.misses  6172    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_256_64_16.out:sim_IPC           1.8389  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_256_64_16.out:dl2.misses        6032    #  total         number  of     misses
+*****************    dl2:256:64:8     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_256_64_8.out:sim_IPC            1.8330  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_256_64_8.out:dl2.misses         6214    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_256_64_8_p_5_6.out:sim_IPC     1.8228  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_256_64_8_p_5_6.out:dl2.misses  6730    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_256_64_8.out:sim_IPC          1.8313  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_256_64_8.out:dl2.misses       6371    #  total         number  of     misses
+*****************    dl2:256:64:4     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_256_64_4.out:sim_IPC            1.7271  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_256_64_4.out:dl2.misses         12491   #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_256_64_4_p_3_3.out:sim_IPC     1.6958  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_256_64_4_p_3_3.out:dl2.misses  14977   #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_256_64_4.out:sim_IPC          1.6976  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_256_64_4.out:dl2.misses       14852   #  total         number  of     misses
+*****************    dl2:128:64:32     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_128_64_32.out:sim_IPC              1.8464  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_128_64_32.out:dl2.misses           5696    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_128_64_32_p_17_24.out:sim_IPC     1.8261  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_128_64_32_p_17_24.out:dl2.misses  6676    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_128_64_32.out:sim_IPC            1.8074  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_128_64_32.out:dl2.misses         7601    #  total         number  of     misses
+*****************    dl2:128:64:16     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_128_64_16.out:sim_IPC             1.8318  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_128_64_16.out:dl2.misses          6240    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_128_64_16_p_9_12.out:sim_IPC     1.8025  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_128_64_16_p_9_12.out:dl2.misses  7758    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_128_64_16.out:sim_IPC           1.8067  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_128_64_16.out:dl2.misses        7678    #  total         number  of     misses
+*****************    dl2:128:64:8     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_128_64_8.out:sim_IPC            1.7668  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_128_64_8.out:dl2.misses         10539   #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_128_64_8_p_5_6.out:sim_IPC     1.6874  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_128_64_8_p_5_6.out:dl2.misses  13714   #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_128_64_8.out:sim_IPC          1.7039  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_128_64_8.out:dl2.misses       12964   #  total         number  of     misses
+*****************    dl2:128:64:4     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_128_64_4.out:sim_IPC            1.5787  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_128_64_4.out:dl2.misses         26914   #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_128_64_4_p_3_3.out:sim_IPC     1.4118  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_128_64_4_p_3_3.out:dl2.misses  35736   #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_128_64_4.out:sim_IPC          1.4135  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_128_64_4.out:dl2.misses       35635   #  total         number  of     misses
+*****************    dl2:64:64:32     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_64_64_32.out:sim_IPC              1.8461  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_64_64_32.out:dl2.misses           5716    #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_64_64_32_p_17_24.out:sim_IPC     1.7718  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_64_64_32_p_17_24.out:dl2.misses  8862    #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_64_64_32.out:sim_IPC            1.7042  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_64_64_32.out:dl2.misses         12448   #  total         number  of     misses
+*****************    dl2:64:64:16     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_64_64_16.out:sim_IPC             1.7690  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_64_64_16.out:dl2.misses          10506   #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_64_64_16_p_9_12.out:sim_IPC     1.6461  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_64_64_16_p_9_12.out:dl2.misses  15392   #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_64_64_16.out:sim_IPC           1.6939  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_64_64_16.out:dl2.misses        13037   #  total         number  of     misses
+*****************    dl2:64:64:8     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_64_64_8.out:sim_IPC            1.6175  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_64_64_8.out:dl2.misses         21795   #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_64_64_8_p_5_6.out:sim_IPC     1.3686  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_64_64_8_p_5_6.out:dl2.misses  32642   #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_64_64_8.out:sim_IPC          1.3533  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_64_64_8.out:dl2.misses       34248   #  total         number  of     misses
+*****************    dl2:64:64:4     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_64_64_4.out:sim_IPC            1.4482  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_64_64_4.out:dl2.misses         40728   #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_64_64_4_p_3_3.out:sim_IPC     1.1254  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_64_64_4_p_3_3.out:dl2.misses  55658   #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_64_64_4.out:sim_IPC          1.1276  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_64_64_4.out:dl2.misses       55530   #  total         number  of     misses
+*****************    dl2:32:64:32     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_32_64_32.out:sim_IPC              1.7666  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_32_64_32.out:dl2.misses           10663   #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_32_64_32_p_17_24.out:sim_IPC     1.4970  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_32_64_32_p_17_24.out:dl2.misses  23302   #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_32_64_32.out:sim_IPC            1.5033  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_32_64_32.out:dl2.misses         23327   #  total         number  of     misses
+*****************    dl2:32:64:16     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_32_64_16.out:sim_IPC             1.6110  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_32_64_16.out:dl2.misses          22659   #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_32_64_16_p_9_12.out:sim_IPC     1.3114  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_32_64_16_p_9_12.out:dl2.misses  36401   #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_32_64_16.out:sim_IPC           1.3600  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_32_64_16.out:dl2.misses        33346   #  total         number  of     misses
+*****************    dl2:32:64:8     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_32_64_8.out:sim_IPC            1.4866  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_32_64_8.out:dl2.misses         35585   #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_32_64_8_p_5_6.out:sim_IPC     1.0866  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_32_64_8_p_5_6.out:dl2.misses  59135   #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_32_64_8.out:sim_IPC          1.1145  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_32_64_8.out:dl2.misses       56502   #  total         number  of     misses
+*****************    dl2:32:64:4     **********************************
+results/Large_Assoc/ijpeg_LRU_dl2_32_64_4.out:sim_IPC            1.4027  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_LRU_dl2_32_64_4.out:dl2.misses         46677   #  total         number  of     misses
+results/Large_Assoc/ijpeg_PLRU_dl2_32_64_4_p_3_3.out:sim_IPC     1.0190  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_PLRU_dl2_32_64_4_p_3_3.out:dl2.misses  67223   #  total         number  of     misses
+results/Large_Assoc/ijpeg_SCORE_dl2_32_64_4.out:sim_IPC          1.0281  #  instructions  per     cycle
+results/Large_Assoc/ijpeg_SCORE_dl2_32_64_4.out:dl2.misses       66260   #  total         number  of     misses
+%%%%%%%%%%%%%   Benchmark:  perl %%%%%%%%%%%%%%
+*****************    dl2:1024:64:32     **********************************
+results/Large_Assoc/perl_LRU_dl2_1024_64_32.out:sim_IPC              1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_1024_64_32.out:dl2.misses           190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_1024_64_32_p_17_24.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_1024_64_32_p_17_24.out:dl2.misses  194     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_1024_64_32.out:sim_IPC            1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_1024_64_32.out:dl2.misses         194     #  total         number  of     misses
+*****************    dl2:1024:64:16     **********************************
+results/Large_Assoc/perl_LRU_dl2_1024_64_16.out:sim_IPC             1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_1024_64_16.out:dl2.misses          190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_1024_64_16_p_9_12.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_1024_64_16_p_9_12.out:dl2.misses  194     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_1024_64_16.out:sim_IPC           1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_1024_64_16.out:dl2.misses        194     #  total         number  of     misses
+*****************    dl2:1024:64:8     **********************************
+results/Large_Assoc/perl_LRU_dl2_1024_64_8.out:sim_IPC            1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_1024_64_8.out:dl2.misses         190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_1024_64_8_p_5_6.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_1024_64_8_p_5_6.out:dl2.misses  194     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_1024_64_8.out:sim_IPC          1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_1024_64_8.out:dl2.misses       194     #  total         number  of     misses
+*****************    dl2:1024:64:4     **********************************
+results/Large_Assoc/perl_LRU_dl2_1024_64_4.out:sim_IPC            1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_1024_64_4.out:dl2.misses         190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_1024_64_4_p_3_3.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_1024_64_4_p_3_3.out:dl2.misses  194     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_1024_64_4.out:sim_IPC          1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_1024_64_4.out:dl2.misses       194     #  total         number  of     misses
+*****************    dl2:512:64:32     **********************************
+results/Large_Assoc/perl_LRU_dl2_512_64_32.out:sim_IPC              1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_512_64_32.out:dl2.misses           190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_512_64_32_p_17_24.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_512_64_32_p_17_24.out:dl2.misses  196     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_512_64_32.out:sim_IPC            1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_512_64_32.out:dl2.misses         196     #  total         number  of     misses
+*****************    dl2:512:64:16     **********************************
+results/Large_Assoc/perl_LRU_dl2_512_64_16.out:sim_IPC             1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_512_64_16.out:dl2.misses          190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_512_64_16_p_9_12.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_512_64_16_p_9_12.out:dl2.misses  196     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_512_64_16.out:sim_IPC           1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_512_64_16.out:dl2.misses        196     #  total         number  of     misses
+*****************    dl2:512:64:8     **********************************
+results/Large_Assoc/perl_LRU_dl2_512_64_8.out:sim_IPC            1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_512_64_8.out:dl2.misses         190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_512_64_8_p_5_6.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_512_64_8_p_5_6.out:dl2.misses  196     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_512_64_8.out:sim_IPC          1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_512_64_8.out:dl2.misses       196     #  total         number  of     misses
+*****************    dl2:512:64:4     **********************************
+results/Large_Assoc/perl_LRU_dl2_512_64_4.out:sim_IPC            1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_512_64_4.out:dl2.misses         190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_512_64_4_p_3_3.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_512_64_4_p_3_3.out:dl2.misses  196     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_512_64_4.out:sim_IPC          1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_512_64_4.out:dl2.misses       196     #  total         number  of     misses
+*****************    dl2:256:64:32     **********************************
+results/Large_Assoc/perl_LRU_dl2_256_64_32.out:sim_IPC              1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_256_64_32.out:dl2.misses           190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_256_64_32_p_17_24.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_256_64_32_p_17_24.out:dl2.misses  198     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_256_64_32.out:sim_IPC            1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_256_64_32.out:dl2.misses         198     #  total         number  of     misses
+*****************    dl2:256:64:16     **********************************
+results/Large_Assoc/perl_LRU_dl2_256_64_16.out:sim_IPC             1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_256_64_16.out:dl2.misses          190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_256_64_16_p_9_12.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_256_64_16_p_9_12.out:dl2.misses  198     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_256_64_16.out:sim_IPC           1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_256_64_16.out:dl2.misses        198     #  total         number  of     misses
+*****************    dl2:256:64:8     **********************************
+results/Large_Assoc/perl_LRU_dl2_256_64_8.out:sim_IPC            1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_256_64_8.out:dl2.misses         190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_256_64_8_p_5_6.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_256_64_8_p_5_6.out:dl2.misses  198     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_256_64_8.out:sim_IPC          1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_256_64_8.out:dl2.misses       198     #  total         number  of     misses
+*****************    dl2:256:64:4     **********************************
+results/Large_Assoc/perl_LRU_dl2_256_64_4.out:sim_IPC            1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_256_64_4.out:dl2.misses         190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_256_64_4_p_3_3.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_256_64_4_p_3_3.out:dl2.misses  198     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_256_64_4.out:sim_IPC          1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_256_64_4.out:dl2.misses       198     #  total         number  of     misses
+*****************    dl2:128:64:32     **********************************
+results/Large_Assoc/perl_LRU_dl2_128_64_32.out:sim_IPC              1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_128_64_32.out:dl2.misses           190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_128_64_32_p_17_24.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_128_64_32_p_17_24.out:dl2.misses  201     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_128_64_32.out:sim_IPC            1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_128_64_32.out:dl2.misses         201     #  total         number  of     misses
+*****************    dl2:128:64:16     **********************************
+results/Large_Assoc/perl_LRU_dl2_128_64_16.out:sim_IPC             1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_128_64_16.out:dl2.misses          190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_128_64_16_p_9_12.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_128_64_16_p_9_12.out:dl2.misses  201     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_128_64_16.out:sim_IPC           1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_128_64_16.out:dl2.misses        201     #  total         number  of     misses
+*****************    dl2:128:64:8     **********************************
+results/Large_Assoc/perl_LRU_dl2_128_64_8.out:sim_IPC            1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_128_64_8.out:dl2.misses         190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_128_64_8_p_5_6.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_128_64_8_p_5_6.out:dl2.misses  201     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_128_64_8.out:sim_IPC          1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_128_64_8.out:dl2.misses       201     #  total         number  of     misses
+*****************    dl2:128:64:4     **********************************
+results/Large_Assoc/perl_LRU_dl2_128_64_4.out:sim_IPC            1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_128_64_4.out:dl2.misses         191     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_128_64_4_p_3_3.out:sim_IPC     1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_128_64_4_p_3_3.out:dl2.misses  201     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_128_64_4.out:sim_IPC          1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_128_64_4.out:dl2.misses       201     #  total         number  of     misses
+*****************    dl2:64:64:32     **********************************
+results/Large_Assoc/perl_LRU_dl2_64_64_32.out:sim_IPC              1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_64_64_32.out:dl2.misses           190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_64_64_32_p_17_24.out:sim_IPC     1.2555  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_64_64_32_p_17_24.out:dl2.misses  205     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_64_64_32.out:sim_IPC            1.2555  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_64_64_32.out:dl2.misses         205     #  total         number  of     misses
+*****************    dl2:64:64:16     **********************************
+results/Large_Assoc/perl_LRU_dl2_64_64_16.out:sim_IPC             1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_64_64_16.out:dl2.misses          190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_64_64_16_p_9_12.out:sim_IPC     1.2555  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_64_64_16_p_9_12.out:dl2.misses  205     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_64_64_16.out:sim_IPC           1.2555  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_64_64_16.out:dl2.misses        205     #  total         number  of     misses
+*****************    dl2:64:64:8     **********************************
+results/Large_Assoc/perl_LRU_dl2_64_64_8.out:sim_IPC            1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_64_64_8.out:dl2.misses         190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_64_64_8_p_5_6.out:sim_IPC     1.2555  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_64_64_8_p_5_6.out:dl2.misses  205     #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_64_64_8.out:sim_IPC          1.2555  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_64_64_8.out:dl2.misses       205     #  total         number  of     misses
+*****************    dl2:64:64:4     **********************************
+results/Large_Assoc/perl_LRU_dl2_64_64_4.out:sim_IPC            0.7254  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_64_64_4.out:dl2.misses         67716   #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_64_64_4_p_3_3.out:sim_IPC     1.0582  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_64_64_4_p_3_3.out:dl2.misses  27211   #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_64_64_4.out:sim_IPC          1.0582  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_64_64_4.out:dl2.misses       27211   #  total         number  of     misses
+*****************    dl2:32:64:32     **********************************
+results/Large_Assoc/perl_LRU_dl2_32_64_32.out:sim_IPC              1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_32_64_32.out:dl2.misses           190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_32_64_32_p_17_24.out:sim_IPC     0.7276  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_32_64_32_p_17_24.out:dl2.misses  54223   #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_32_64_32.out:sim_IPC            1.2553  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_32_64_32.out:dl2.misses         221     #  total         number  of     misses
+*****************    dl2:32:64:16     **********************************
+results/Large_Assoc/perl_LRU_dl2_32_64_16.out:sim_IPC             1.2557  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_32_64_16.out:dl2.misses          190     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_32_64_16_p_9_12.out:sim_IPC     0.7276  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_32_64_16_p_9_12.out:dl2.misses  54223   #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_32_64_16.out:sim_IPC           1.2553  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_32_64_16.out:dl2.misses        221     #  total         number  of     misses
+*****************    dl2:32:64:8     **********************************
+results/Large_Assoc/perl_LRU_dl2_32_64_8.out:sim_IPC            1.2556  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_32_64_8.out:dl2.misses         193     #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_32_64_8_p_5_6.out:sim_IPC     0.7276  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_32_64_8_p_5_6.out:dl2.misses  54223   #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_32_64_8.out:sim_IPC          0.9212  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_32_64_8.out:dl2.misses       27228   #  total         number  of     misses
+*****************    dl2:32:64:4     **********************************
+results/Large_Assoc/perl_LRU_dl2_32_64_4.out:sim_IPC            0.7254  #  instructions  per     cycle
+results/Large_Assoc/perl_LRU_dl2_32_64_4.out:dl2.misses         67728   #  total         number  of     misses
+results/Large_Assoc/perl_PLRU_dl2_32_64_4_p_3_3.out:sim_IPC     0.4760  #  instructions  per     cycle
+results/Large_Assoc/perl_PLRU_dl2_32_64_4_p_3_3.out:dl2.misses  135244  #  total         number  of     misses
+results/Large_Assoc/perl_SCORE_dl2_32_64_4.out:sim_IPC          0.6565  #  instructions  per     cycle
+results/Large_Assoc/perl_SCORE_dl2_32_64_4.out:dl2.misses       81243   #  total         number  of     misses
