@@ -64,9 +64,19 @@ sub gen_missrate_grep_string() {
     return $missrate_string;
 }
 
+sub find_logfiles() {
+    my $logfiles_path = shift;
+    my $pwd = `pwd`;
+    chdir $logfiles_path;
+    my @logfiles = glob("*.out");
+    chdir $pwd;
+    return @logfiles;
+}
+
 sub run_unit_tests() {
     use Test::More;
     my $test_file = "go_PLRU_dl2_1024_64_16_p_9_12.out";
+    $logfiles_path = ".";
    
     my $result = &my_grep("IPC", $test_file);
     &is($result, "sim_IPC  1.1643  #  instructions  per  cycle", "Grepping for IPC");
@@ -80,6 +90,10 @@ sub run_unit_tests() {
     &is($missrate_grep_string, "dl2.*miss_rate", "Generate the cache miss_rate grep string");
     my $grep_result = &my_grep($missrate_grep_string, $test_file);
     &is($grep_result, "dl2.miss_rate  0.0062  #  miss  rate  (i.e.,  misses/ref)", "Grepping for missrate");
+
+    my @logfiles = &find_logfiles($logfiles_path);
+    my @expected_logfiles = ("$test_file");
+    &is_deeply(\@logfiles, \@expected_logfiles, "Finding all .out logfiles to convert to csv in directory");
 
     &done_testing();
 }
