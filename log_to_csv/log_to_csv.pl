@@ -50,6 +50,14 @@ sub my_grep() {
     return $grep_result;
 }
 
+sub extract_cache_name() {
+    my $logfile_name = shift;
+    if( $logfile_name =~ /^\w+?_\w+?_(\w+?)_/ ) {
+        return $1;
+    }
+    return undef;
+}
+
 sub gen_missrate_grep_string() {
     return 0;
 }
@@ -61,10 +69,15 @@ sub run_unit_tests() {
     my $result = &my_grep("IPC", $test_file);
     &is($result, "sim_IPC  1.1643  #  instructions  per  cycle", "Grepping for IPC");
 
-    my $missrate_grep_string = &gen_missrate_grep_string();
-    &is($missrate_grep_string, "dl2.*miss_rate", "Generate the cache miss_rate grep string");
-    my $result = &my_grep("dl2.*miss_rate", $test_file);
-    &is($result, "sim_IPC  1.1643  #  instructions  per  cycle", "Grepping for IPC");
+    my $cache_name = &extract_cache_name($test_file);
+    &is($cache_name, "dl2", "Extracting the cachename of interest from filename");
+    my $cache_name = &extract_cache_name("bad_format.log");
+    &is($cache_name, undef, "Fails to extract cachename due to bad logfile format");
+
+    #my $missrate_grep_string = &gen_missrate_grep_string();
+    #&is($missrate_grep_string, "dl2.*miss_rate", "Generate the cache miss_rate grep string");
+    #my $result = &my_grep("dl2.*miss_rate", $test_file);
+    #&is($result, "sim_IPC  1.1643  #  instructions  per  cycle", "Grepping for IPC");
 
     &done_testing();
 }
