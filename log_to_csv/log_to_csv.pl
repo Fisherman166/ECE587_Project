@@ -3,6 +3,7 @@
 use strict;
 use warnings;
 use Getopt::Long;
+use Cwd;
 
 my $logfiles_path = undef;
 my $run_unittests = undef;
@@ -74,7 +75,7 @@ sub gen_missrate_grep_string() {
 
 sub find_logfiles() {
     my $logfiles_path = shift;
-    my $pwd = `pwd`;
+    my $pwd = getcwd;
     chdir $logfiles_path;
     my @logfiles = glob("*.out");
     chdir $pwd;
