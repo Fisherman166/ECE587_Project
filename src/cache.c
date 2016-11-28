@@ -143,10 +143,10 @@
 
 static FILE* debug_file = NULL;
 
-static void debug_print(const char* string) {
+/*static void debug_print(const char* string) {
     fprintf(debug_file, string);
     fflush(debug_file);
-}
+}*/
 
 /* unlink BLK from the hash table bucket chain in SET */
 static void
@@ -418,7 +418,7 @@ cache_create(char *name,		/* name of the cache */
       debug_file = fopen("debug_out.log", "w");
       if(debug_file == NULL) fatal("FAILED TO OPEN DEBUG FILE\n");
       score_init(cp);
-      debug_print("After init cache\n");
+ //     debug_print("After init cache\n");
   }
   return cp;
 }
@@ -610,9 +610,10 @@ cache_access(struct cache_t *cp,	/* cache to access */
     repl = get_protected_LRU_victim(&cp->sets[set], cp->assoc);
     break;
   case SCORE:
-    debug_print("Before evict SCORE \n");
+  //  debug_print("Before evict SCORE \n");
+   // score_update_state(&cp->sets[set], blk, false, cp->assoc);
     repl = score_select_victim(&cp->sets[set], cp->assoc);
-    debug_print("After evict SCORE\n");
+  //  debug_print("After evict SCORE\n");
     score_update_state(&cp->sets[set], blk, false, cp->assoc);
     break;
   default:
@@ -715,7 +716,7 @@ cache_access(struct cache_t *cp,	/* cache to access */
    }
 
   if(cp->policy == SCORE) {
-      debug_print("SCORE slow hit\n");
+    //  debug_print("SCORE slow hit\n");
       score_update_state(&cp->sets[set], blk, true, cp->assoc);
 
   }

@@ -6,17 +6,17 @@ set skip_instr=100000000
 set run_instr=20000000
 # name for reslults and folder location 
 # Note: Create folder first
-set file=Results_Latency
-set res_folder=W_Latency
+set file=dl2_Baseline
+set res_folder=dl2_Baseline
 # Cache specific
 # Change values here 
-set cache_type=dl1
+set cache_type=dl2
 set mem_Lat=150
 set mem_rest_Lat=10
 set benchmark_list=( go gcc li ijpeg perl )
-set set_list=( 256 128 64 32 16 )      
-set line_sz_list= ( 64 32 )
-set assoc_list=( 16 8 4 ) # for PLRU and Score not doing 2 it is pointless 
+set set_list=( 4 )      
+set line_sz_list= ( 64 )
+set assoc_list=( 32 16 8 )  # for PLRU and Score not doing 2 it is pointless 
 # No much to change beyond this point 
 
 # Clear Results file 
@@ -41,7 +41,7 @@ echo "Running" $benchmark
             
              # Runs Score 
            ./Run.pl -db bench.db -dir results/gcc1 -benchmark $benchmark -sim $sim_dir/src/sim-outorder \
-             -args "-fastfwd $skip_instr -max:inst $run_instr -cache:${cache_type} ${cache_conf}:s -mem:lat ${mem_Lat} ${mem_rest_Lat}" >& results/${res_folder}/${benchmark}_SCORE_${cache_name}.out     
+            -args "-fastfwd $skip_instr -max:inst $run_instr -cache:${cache_type} ${cache_conf}:s -mem:lat ${mem_Lat} ${mem_rest_Lat}" >& results/${res_folder}/${benchmark}_SCORE_${cache_name}.out     
             
             # values for unique to PLRU 
             @ way2save=( ($a / 4) * 3 )
@@ -52,7 +52,7 @@ echo "Running" $benchmark
           
             endif 
             echo "*****************    ${cache_conf}     **********************************" >> ${file}.log
-            grep IPC results/${res_folder}/${benchmark}_*_${cache_name}*.out | column -t >> ${file}.log
+          #  egrep 'IPC|dl2.misses' results/${res_folder}/${benchmark}_*_${cache_name}*.out | column -t >> ${file}.log
 
 
             end # ways 
