@@ -610,11 +610,8 @@ cache_access(struct cache_t *cp,	/* cache to access */
     repl = get_protected_LRU_victim(&cp->sets[set], cp->assoc);
     break;
   case SCORE:
-  //  debug_print("Before evict SCORE \n");
-   // score_update_state(&cp->sets[set], blk, false, cp->assoc);
     repl = score_select_victim(&cp->sets[set], cp->assoc);
-  //  debug_print("After evict SCORE\n");
-    score_update_state(&cp->sets[set], blk, false, cp->assoc);
+    score_update_state(&cp->sets[set], repl, FALSE, cp->assoc);
     break;
   default:
     panic("bogus replacement policy");
@@ -717,7 +714,7 @@ cache_access(struct cache_t *cp,	/* cache to access */
 
   if(cp->policy == SCORE) {
     //  debug_print("SCORE slow hit\n");
-      score_update_state(&cp->sets[set], blk, true, cp->assoc);
+      score_update_state(&cp->sets[set], blk, TRUE, cp->assoc);
 
   }
 

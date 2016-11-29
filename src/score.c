@@ -3,8 +3,9 @@
 #include <time.h>
 #include "score.h"
 #include "misc.h"
+#include <stdbool.h>
 
-
+//#define DEBUG_f
 // *************************************************
 //  global for now will change to a struct 
 //*************************************************
@@ -44,6 +45,21 @@
 
 
 // ***************************************************************************
+static FILE* DEBUG_FILE = NULL;
+
+static void open_debug() {
+    DEBUG_FILE = fopen("Score_debug.log", "w");
+    if(DEBUG_FILE == NULL) {
+        fatal("Failed to open Score debug FILE");
+    }
+}
+
+static void write_debug(const char* string) {
+    fprintf(DEBUG_FILE, "%s", string);
+    fflush(DEBUG_FILE);
+}
+
+
     // Init score
 void initScore(struct cache_blk_t*  self) { self->score = 0; }
 
@@ -82,6 +98,9 @@ void score_init(struct cache_t * cache)
             current_way= current_way->way_next;
         }
 	}
+    #ifdef DEBUG_F
+    open_debug();
+    #endif
     // Statistics
     totalScores            = 0;
     updateCounter          = 0;
@@ -100,26 +119,43 @@ void score_init(struct cache_t * cache)
 
 void score_update_state( struct cache_set_t * access_set , struct cache_blk_t *access_blk, bool cache_hit, int assoc)
 {
+  #ifdef DEBUG_F
+  char text[200];
+  #endif
   struct cache_blk_t * update_set = access_set->way_head;
   int i;
 
     //----------------------------------------------
     // Update scores
     //----------------------------------------------
-    for (i = 0; i < assoc; i++) {                        // updates the set
+    for (i = 0; i < assoc; i++) {                        // updates the entire set
         if (update_set != NULL){
            if (update_set == access_blk) {                             // access block 
                if (cache_hit) {                                           // if a hit 
                   incrScore((update_set));                              // increase the scrore
+                #ifdef DEBUG_F
+                sprintf(text, "Hit Update Selected line Under Threshold Score: %u \n",getScore(update_set) );
+                write_debug(text);
+                #endif
                 } else {						
                 setInitScore((update_set),initialScore);              // on miss set initial score  
+                #ifdef DEBUG_F
+                sprintf(text, "Miss Update Score: %u \n",getScore(update_set));
+                write_debug(text);
+                #endif
                 }
         
            } else {
             decrScore(update_set);                                  // other members of the set not hit score decreased
+                #ifdef DEBUG_F
+                //sprintf(text, "Other Update Score: %u \n",getScore(update_set));
+                //write_debug(text);
+                #endif             
              }
+             
+          update_set = update_set->way_next;
         }
-        update_set = update_set->way_next;
+        
     }
     
 
@@ -154,7 +190,10 @@ void score_update_state( struct cache_set_t * access_set , struct cache_blk_t *a
 struct cache_blk_t * score_select_victim( struct cache_set_t * miss_set, int assoc)
 {
     struct cache_blk_t * way = NULL;
-
+    #ifdef DEBUG_F
+    char text[200];
+    #endif
+    
     //----------------------------------------------
     // Selection policy: Randomly select lines with scores under threshold
     //----------------------------------------------
@@ -196,8 +235,12 @@ struct cache_blk_t * score_select_victim( struct cache_set_t * miss_set, int ass
    
         for (i = 0; i < assoc; i++) {
            if(miss_blk != NULL){
-            if (getScore(miss_blk) < threshold_score) {
+            if (getScore(miss_blk) < threshold_score) { // only evicts line under thresh
                 if (line_cnt == line_number) {
+                #ifdef DEBUG_F
+              //  sprintf(text, "Evicted Selected line Under Threshold Score: %u , Thres: %u \n",getScore(miss_blk), threshold_score );
+               // write_debug(text);
+                #endif
                     way = miss_blk ;
                     break;
                 }
@@ -225,6 +268,10 @@ struct cache_blk_t * score_select_victim( struct cache_set_t * miss_set, int ass
     
     } else {
         noLinesUnderThreshold++;
+        #ifdef DEBUG_F
+       // sprintf(text, "Evition, No line under Thresh Score: %u , Thresh: %u \n",getScore(miss_blk), threshold_score );
+       // write_debug(text);
+        #endif
     }
     
     numLinesEvicted++;

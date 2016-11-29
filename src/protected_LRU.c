@@ -11,7 +11,7 @@
 #include "protected_LRU.h"
 #include "misc.h"
 
-//#define DEBUG
+#define DEBUG_F
 
 static uint32_t max_counter_value = 0;
 static uint32_t ways_to_save_on_eviction = 0;
@@ -57,7 +57,7 @@ void init_protected_LRU(struct cache_t* cache, unsigned int counter_value_max, u
             current_way = current_way->way_next;
         }
     }
-    #ifdef DEBUG
+    #ifdef DEBUG_F
     open_debug();
     #endif
 }
@@ -77,7 +77,7 @@ void update_protected_LRU(struct cache_set_t* hit_set, struct cache_blk_t* hit_b
 }
 
 struct cache_blk_t* get_protected_LRU_victim(struct cache_set_t* miss_set, int assoc) {
-    #ifdef DEBUG
+    #ifdef DEBUG_F
     char text[200];
     #endif
 
@@ -101,7 +101,7 @@ struct cache_blk_t* get_protected_LRU_victim(struct cache_set_t* miss_set, int a
         uint32_t largest_counter = 0;
         validWay* largest_counter_way = NULL;
         for(way = 0; way < assoc; way++) {
-            #ifdef DEBUG
+            #ifdef DEBUG_F
             sprintf(text, "Current access count = %u\n", valid_ways[way].access_number);
             write_debug(text);
             #endif
@@ -112,7 +112,7 @@ struct cache_blk_t* get_protected_LRU_victim(struct cache_set_t* miss_set, int a
                 largest_counter_way = &valid_ways[way];
             }
         }
-        #ifdef DEBUG
+        #ifdef DEBUG_F
         sprintf(text, "Counter to ignore = %u\n", largest_counter_way->cache_line->access_counter);
         write_debug(text);
         #endif
@@ -125,7 +125,7 @@ struct cache_blk_t* get_protected_LRU_victim(struct cache_set_t* miss_set, int a
         if(valid_ways[way].ignore) continue;
         if( way > LRU_stack_position ) LRU_stack_position = way;
     }
-    #ifdef DEBUG
+    #ifdef DEBUG_F
     sprintf(text, "Remove way with access count = %u\n", valid_ways[LRU_stack_position].cache_line->access_counter);
     write_debug(text);
     #endif
