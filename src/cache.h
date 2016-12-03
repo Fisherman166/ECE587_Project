@@ -127,14 +127,15 @@ struct cache_blk_t
 				   is set when a miss fetch is initiated */
   byte_t *user_data;		/* pointer to user defined data, e.g.,
 				   pre-decode data or physical page address */
+  int score; /* added for score eviction */
   unsigned int access_counter; /* How many times its been accessed in PLRU */
+  tick_t hit_timestamp; /* Last cycle a hit occured on this line */
+
   /* DATA should be pointer-aligned due to preceeding field */
   /* NOTE: this is a variable-size tail array, this must be the LAST field
      defined in this structure! */
   byte_t data[1];		/* actual data block starts here, block size
 				   should probably be a multiple of 8 */
-// added for score cache eviction method
- int score;			/* added for score eviction */
 };
 
 /* cache set definition (one or more blocks sharing the same set index) */

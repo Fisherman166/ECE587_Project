@@ -607,7 +607,7 @@ cache_access(struct cache_t *cp,	/* cache to access */
     }
     break;
   case PLRU:
-    repl = get_protected_LRU_victim(&cp->sets[set], cp->assoc);
+    repl = get_protected_LRU_victim(&cp->sets[set], cp->assoc, now);
     break;
   case SCORE:
     repl = score_select_victim(&cp->sets[set], cp->assoc);
@@ -709,7 +709,7 @@ cache_access(struct cache_t *cp,	/* cache to access */
     }
 
   if(cp->policy == PLRU) {
-      update_protected_LRU(&cp->sets[set], blk);
+      update_protected_LRU(&cp->sets[set], blk, now);
    }
 
   if(cp->policy == SCORE) {

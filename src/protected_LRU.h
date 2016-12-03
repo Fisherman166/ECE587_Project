@@ -11,10 +11,11 @@
 
 #include <stdint.h>
 #include "cache.h"
+#include "host.h"
 
 void init_protected_LRU(struct cache_t*, unsigned int, unsigned int);
-void update_protected_LRU(struct cache_set_t*, struct cache_blk_t*);
-struct cache_blk_t* get_protected_LRU_victim(struct cache_set_t*, int);
+void update_protected_LRU(struct cache_set_t*, struct cache_blk_t*, tick_t);
+struct cache_blk_t* get_protected_LRU_victim(struct cache_set_t*, int, tick_t);
 
 #endif
 
