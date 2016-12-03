@@ -142,6 +142,13 @@
 #define BOUND_POS(N)		((int)(MIN(MAX(0, (N)), 2147483647)))
 
 static FILE* debug_file = NULL;
+static FILE* LRU_EVICTION_CYCLES = NULL;
+
+static void write_evictions(struct cache_blk_t* line, tick_t sim_cycle) {
+    tick_t eviction_delta = sim_cycle - line->hit_timestamp;
+    fprintf(LRU_EVICTION_CYCLES, "%d\n", eviction_delta);
+    fflush(LRU_EVICTION_CYCLES);
+}
 
 /*static void debug_print(const char* string) {
     fprintf(debug_file, string);
@@ -154,6 +161,7 @@ unlink_htab_ent(struct cache_t *cp,		/* cache to update */
 		struct cache_set_t *set,	/* set containing bkt chain */
 		struct cache_blk_t *blk)	/* block to unlink */
 {
+
   struct cache_blk_t *prev, *ent;
   int index = CACHE_HASH(cp, blk->tag);
 
@@ -410,6 +418,13 @@ cache_create(char *name,		/* name of the cache */
 	}
     }
 
+  if(policy == LRU) {
+      LRU_EVICTION_CYCLES = fopen("LRU_eviction_cycles.log", "w");
+      if(LRU_EVICTION_CYCLES == NULL) {
+          fatal("FAILED TO OPEN LRU EVCTION CYCLES\n");
+      }
+  }
+
   if(policy == PLRU) {
       init_protected_LRU(cp, max_counter_value, ways_to_save);
   }
@@ -596,6 +611,10 @@ cache_access(struct cache_t *cp,	/* cache to access */
      the appropriate place in the way list */
   switch (cp->policy) {
   case LRU:
+    repl = cp->sets[set].way_tail;
+    write_evictions(repl, now);
+    update_way_list(&cp->sets[set], repl, Head);
+    break;
   case FIFO:
     repl = cp->sets[set].way_tail;
     update_way_list(&cp->sets[set], repl, Head);
@@ -699,6 +718,8 @@ cache_access(struct cache_t *cp,	/* cache to access */
   /* update dirty status */
   if (cmd == Write)
     blk->status |= CACHE_BLK_DIRTY;
+
+  blk->hit_timestamp = now;
 
   /* if LRU replacement and this is not the first element of list, reorder */
   if (blk->way_prev && ((cp->policy == LRU) || (cp->policy == PLRU)) )
