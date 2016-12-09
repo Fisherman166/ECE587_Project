@@ -612,7 +612,11 @@ cache_access(struct cache_t *cp,	/* cache to access */
   switch (cp->policy) {
   case LRU:
     repl = cp->sets[set].way_tail;
-    write_evictions(repl, now);
+	char * dl2;
+	dl2 ="dl2";
+	if (strcmp(cp->name,dl2)==0) {
+		write_evictions(repl, now);
+	}
     update_way_list(&cp->sets[set], repl, Head);
     break;
   case FIFO:
